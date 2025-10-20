@@ -1,0 +1,804 @@
+@font-face {
+  font-family: 'Redemption';
+  src: url('../fonts/Roundex.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gitaluevo';
+  src: url('../fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Internet';
+  src: url('../fonts/LTInternet-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --primary: #5364ff;
+  --bg: #0f1116;
+  --text: #f4f4f4;
+  --accent: #1a1d25;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  color: var(--text);
+  background-color: #1a1a1a;
+  background-size: 30px 30px;
+
+  /* --- Grille bleue en fond (ton effet original) --- */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(79, 155, 255, 0.05) 0,
+      rgba(79, 155, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgba(79, 155, 255, 0.05) 0,
+      rgba(79, 155, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+}
+
+/* ========== HEADER ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Redemption', sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.95) 0%,      /* haut très sombre */
+    rgba(26, 26, 26, 0.9) 60%,      /* transition douce */
+    rgba(26, 26, 26, 0.8) 100%      /* s’intègre avec le fond de la grid */
+  );
+  z-index: 1000;
+}
+
+.menu-toggle {
+  display: none; /* Caché par défaut sur grand écran */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(42%) saturate(3952%) hue-rotate(198deg) brightness(102%) contrast(97%);
+  transition: transform 0.3s, filter 0.3s;
+}
+.social-icons img.cv-icon {
+  width: 30px;  /* nouvelle largeur */
+  height: 30px; /* nouvelle hauteur */
+}
+.social-icons a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(49%) sepia(89%) saturate(4822%) hue-rotate(205deg) brightness(102%) contrast(101%);
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #c6deff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--primary);
+  outline: none;
+}
+
+/* Style pour le lien de la section active */
+nav a.active {
+  color: var(--primary);
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 30px; /* Espace par rapport aux icônes sociales */
+}
+
+.lang-switcher a {
+  font-size: 18px; /* Taille de police plus petite que la nav principale */
+  font-weight: bold;
+}
+
+.lang-switcher span {
+  color: rgba(244, 244, 244, 0.4);
+  font-size: 18px;
+}
+
+.lang-switcher a.active {
+  color: var(--primary);
+}
+
+
+/* ========== SECTIONS ========== */
+.section {
+  min-height: 100vh; /* plutôt que height: 100vh */
+  padding: 140px 10vw 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Internet', sans-serif;
+}
+
+/* ======================================== */
+/* ========== RESPONSIVE HEADER ========== */
+/* ======================================== */
+
+@media (max-width: 900px) {
+  header .container {
+    justify-content: flex-end; /* Aligne le bouton hamburger à droite */
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  nav {
+    /* Le menu prend tout l'écran et est caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+    /* Transition pour l'apparition */
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  nav.active {
+    transform: translateY(0);
+  }
+
+  nav.active + .menu-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav.active + .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  nav.active + .menu-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav a {
+    font-size: 2rem; /* Police plus grande pour le mobile */
+  }
+
+  .social-icons {
+    /* Les icônes sociales sont aussi dans le menu mobile */
+    margin-top: 20px;
+    gap: 30px;
+  }
+
+  .lang-switcher {
+    /* Le sélecteur de langue est aussi dans le menu mobile */
+    order: -1; /* Le place avant les icônes sociales */
+    margin-left: 0;
+  }
+}
+
+
+
+/* ABOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 20px rgba(0, 209, 178, 0.3);
+}
+
+.about-text {
+  max-width: 500px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* PROJECTS Section General Styling */
+.projects {
+  text-align: center;
+  /* Keep the background if you like it, or remove/adjust */
+  background-color: rgba(15, 17, 22, 0.8); /* Slightly darker than body bg */
+  padding-top: 120px; /* Reduced from 140px */
+  padding-bottom: 80px; /* Increased slightly */
+   /* Removed border-radius and box-shadow from the section itself */
+}
+
+.projects h2 {
+  margin-bottom: 50px; /* Reduced from 60px */
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-family: 'Gitaluevo', sans-serif; /* Using one of your fonts */
+}
+
+/* New Project Grid Container */
+.projects-grid {
+  display: grid;
+  /* Creates responsive columns: fits as many cards as possible with a min width of 320px, max of 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px; /* Spacing between cards */
+  max-width: 1200px; /* Max width of the grid */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* New Unified Project Card Styling */
+.project-card {
+  background-color: var(--accent); /* Darker card background */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Keep image corners rounded */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  text-align: left; /* Align text to the left */
+  display: flex; /* Use flexbox for vertical layout */
+  flex-direction: column; /* Stack image and content vertically */
+  position: relative; /* Crucial for positioning the badges */
+  cursor: pointer; /* Indicate that the card is clickable */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: scale(1.04); /* Scale the card up slightly */
+  box-shadow: 0 8px 25px rgba(58, 137, 255, 0.2); /* Enhance shadow, add primary color glow */
+}
+
+/* New Badge Container */
+.card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10; /* Ensure badges are above the image */
+  pointer-events: none; /* Allows clicking through the container to the card */
+}
+
+/* New General Badge Styling */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: 'Internet', sans-serif;
+  pointer-events: auto; /* Re-enable pointer events for the badges themselves */
+}
+
+.date-badge {
+  background-color: rgba(58, 137, 255, 0.8); /* Using your primary color with some transparency */
+  color: var(--text);
+}
+
+.wip-badge {
+  background-color: #ffc107; /* A nice yellow color */
+  color: #1a1a1a; /* Dark text for contrast */
+}
+
+
+/* Card Image */
+.project-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area, cropping if needed */
+  display: block; /* Remove potential space below image */
+  border-bottom: 1px solid rgba(58, 137, 255, 0.2); /* Optional subtle separator */
+}
+
+/* Card Content Area */
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack title, p, tags vertically */
+  flex-grow: 1; /* Allow content area to grow and fill space */
+}
+
+.project-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px; /* Space below title */
+  color: var(--primary);
+  font-size: 1.4rem; /* Slightly larger title */
+  font-family: 'Gitaluevo', sans-serif; /* Consistent font */
+}
+
+.project-content p {
+  font-size: 0.95rem; /* Standard paragraph size */
+  line-height: 1.6;
+  margin-bottom: 15px; /* Space below paragraph */
+  flex-grow: 1; /* Allow paragraph to push tags down */
+  color: var(--text); /* Ensure text color */
+}
+
+/* Tags Container */
+.project-tags {
+  margin-top: auto; /* Push tags to the bottom */
+  padding-top: 10px; /* Space above tags */
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap */
+  gap: 8px; /* Space between tags */
+}
+
+/* Individual Tag Styling */
+.project-tags .tag {
+  background-color: rgba(58, 137, 255, 0.1); /* Subtle background using primary color */
+  color: #c6deff; /* Lighter text color for tags */
+  padding: 4px 10px; /* Padding inside tag */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 0.8rem; /* Smaller font size for tags */
+  font-family: 'Internet', sans-serif; /* Consistent font */
+}
+
+/* Optional: Style for "Learn more" link if you keep it */
+.project-content a {
+  display: inline-block; /* Needed for margin */
+  margin-top: 15px; /* Space above link */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.project-content a:hover {
+  color: #c6deff; /* Lighter color on hover */
+  text-decoration: underline;
+}
+
+/* Styles for hidden projects and the "View More" button */
+.project-card.project-hidden {
+  /* Hide by default with properties that can be transitioned */
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out, padding 0.7s, margin 0.7s;
+}
+
+.project-card.project-hidden.visible {
+  /* Properties when shown */
+  max-height: 500px; /* Adjust if your cards are taller */
+  opacity: 1;
+  padding: 20px; /* Restore original padding if any */
+  margin: 0; /* Restore original margin */
+  border: 1px solid rgba(58, 137, 255, 0.2);
+}
+
+.view-more-btn {
+  margin-top: 40px;
+  padding: 14px 35px;
+  /* Style "Ghost Button" */
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Internet', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease; /* Transition plus douce */
+}
+
+.view-more-btn:hover {
+  background-color: var(--primary);
+  color: var(--text);
+  transform: translateY(-3px); /* Léger mouvement vers le haut */
+  box-shadow: 0 6px 20px rgba(83, 100, 255, 0.25); /* Ombre colorée */
+}
+
+/* --- Remove or Comment Out Old Project Styles --- */
+/*
+.featured-projects,
+.featured-card,
+.featured-card:hover,
+.featured-card img,
+.featured-content,
+.featured-content h3,
+.featured-content p,
+.featured-content .tags,
+.featured-content a,
+.secondary-projects,
+.card,
+.card:hover,
+.card img,
+.card h3,
+.card .tags,
+.card a {
+   Remove or comment out these styles
+}
+*/
+
+/* ========== SKILLS ========== */
+/* ========== SKILLS ========== */
+.skills {
+  /* La section reprend la hauteur complète de l'écran */
+  /* min-height: 100vh; est hérité de .section */
+}
+
+.skills h2 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-family: 'Gitaluevo', sans-serif;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.skill-card {
+  background-color: rgba(26, 29, 37, 0.6); /* Fond gris semi-transparent */
+  border: 1px solid rgba(58, 137, 255, 0.2); /* Bordure subtile pour la visibilité */
+  border-radius: 12px;
+  padding: 35px; /* Augmentation du padding pour agrandir les cartes */
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.05); /* Effet de survol similaire aux projets */
+  box-shadow: 0 8px 25px rgba(58, 137, 255, 0.2);
+  background-color: var(--accent); /* Le fond apparaît au survol */
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-family: 'Gitaluevo', sans-serif;
+  font-size: 1.4rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Réutilisation du style .tag des projets pour la cohérence */
+.skill-tags .tag {
+  background-color: rgba(58, 137, 255, 0.1);
+  color: #c6deff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Internet', sans-serif;
+}
+
+/* ========== PARCOURS (TIMELINE) ========== */
+.parcours {
+  /* Ces sections sont plus courtes et ne prennent pas tout l'écran */
+  padding-top: 120px; /* Espace par rapport à la section précédente */
+  min-height: auto; /* Annule le min-height: 100vh de .section */
+  padding-bottom: 80px;
+}
+
+.parcours h2 {
+  margin-bottom: 70px;
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-family: 'Gitaluevo', sans-serif;
+}
+.parcours-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espace entre les cartes */
+}
+
+.parcours-card {
+  background-color: #1f232c; /* Un gris-bleu plus clair pour un meilleur contraste */
+  border: 1px solid rgba(58, 137, 255, 0.2);
+  border-radius: 12px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parcours-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(58, 137, 255, 0.15);
+}
+
+.parcours-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: var(--text);
+  font-family: 'Gitaluevo', sans-serif;
+}
+
+.parcours-info .location {
+  margin: 0;
+  font-size: 1rem;
+  color: #c6deff;
+  font-style: italic;
+}
+
+.parcours-info .description {
+  margin: 10px 0 0 0;
+  font-size: 0.95rem;
+  color: #a8c4ff;
+  line-height: 1.5;
+}
+
+.parcours-date {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 8px;
+}
+
+/* ========== FOOTER (CONTACT) ========== */
+.footer {
+  background-color: var(--bg);
+  padding: 60px 20px 20px;
+  text-align: center;
+  font-family: 'Internet', sans-serif;
+  border-top: 1px solid rgba(58, 137, 255, 0.1);
+}
+
+.footer .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-family: 'Gitaluevo', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  color: #c6deff;
+  margin-bottom: 30px;
+}
+
+.footer .email-link {
+  color: var(--primary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.footer .email-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer .copyright {
+  margin-top: 40px;
+  font-size: 0.8rem;
+  color: rgba(244, 244, 244, 0.5);
+}
+
+/* ========== BACK TO TOP BUTTON ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: var(--text);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  
+  /* Caché par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ======================================== */
+/* ========== RESPONSIVE PROJECTS ========== */
+/* ======================================== */
+
+@media (max-width: 768px) {
+  .projects {
+    /* Réduit le padding sur les petits écrans pour donner plus de place au contenu */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .projects h2 {
+    /* Réduit la taille du titre pour une meilleure lisibilité sur mobile */
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    /* S'assure que la grille prend toute la largeur sur les petits écrans,
+       permettant aux cartes de s'empiler verticalement. */
+    width: 100%;
+  }
+}
+
+/* ======================================== */
+/* ========== PROJECT MODAL STYLES ========== */
+/* ======================================== */
+
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 17, 22, 0.95); /* Dark, semi-transparent background */
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.project-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--accent);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  /* Animation */
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+
+.project-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
+#modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain; /* Show the full image without cropping */
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+#modal-title {
+  font-family: 'Gitaluevo', sans-serif;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#modal-description {
+  font-family: 'Internet', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #c6deff;
+}
+}

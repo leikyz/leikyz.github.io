@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
