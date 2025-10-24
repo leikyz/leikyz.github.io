@@ -14,6 +14,11 @@
       <span></span>
       <span></span>
     </button>
+    <div class="lang-switcher">
+      <a href="#" class="lang-btn" data-lang="fr">FR</a>
+      <span>|</span>
+      <a href="#" class="lang-btn" data-lang="en">EN</a>
+    </div>
     <nav id="main-nav">
       <a href="#about" data-lang-fr="À propos" data-lang-en="About">À propos</a>
       <a href="#projects" data-lang-fr="Projets" data-lang-en="Projects">Projets</a>
@@ -21,26 +26,24 @@
       <a href="#experiences" data-lang-fr="Expériences" data-lang-en="Experiences">Expériences</a>
       <a href="#parcours" data-lang-fr="Parcours" data-lang-en="Parcours">Parcours</a>
       <a href="#contact" data-lang-fr="Contact" data-lang-en="Contact">Contact</a>
-    <div class="lang-switcher">
-      <a href="#" class="lang-btn" data-lang="fr">FR</a>
-      <span>|</span>
-      <a href="#" class="lang-btn" data-lang="en">EN</a>
-    </div>
+      <!-- Mobile only -->
+      <div class="social-icons-mobile"></div>
+      <div class="lang-switcher-mobile"></div>
+    </nav>
     <div class="social-icons">
       <a href="https://github.com/leikyz" target="_blank" title="GitHub">
-        <img src="images/icon/github.png" alt="GitHub Icon">
+        <img src="assets/images/icon/github.png" alt="GitHub Icon">
       </a>
       <a href="https://www.linkedin.com/in/mat%C3%A9o-scarpetta-b43733247/" target="_blank" title="LinkedIn">
-        <img src="images/icon/linkedin.png" alt="LinkedIn Icon">
+        <img src="assets/images/icon/linkedin.png" alt="LinkedIn Icon">
       </a>
       <a href="assets/CV_Mateo_Scarpetta.pdf" target="_blank" title="CV">
-        <img src="images/icon/cv.png" alt="CV Icon" class="cv-icon">
+        <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon">
       </a>
       <a href="mailto:leikyz17@outlook.com" title="Email">
-        <img src="images/icon/email.png" alt="Mail Icon">
+        <img src="assets/images/icon/email.png" alt="Mail Icon">
       </a>
     </div>
-    </nav>
   </div>
 </header>
 
@@ -49,7 +52,7 @@
     <!-- ABOUT -->
     <section id="about" class="section about">
       <div class="about-container">
-        <img src="images/me2.jpg" alt="Your photo" class="profile-pic" />
+        <img src="assets/images/me2.jpg" alt="Your photo" class="profile-pic" />
         <div class="about-text">
           <h1 data-lang-fr="Salut, je suis Mateo Scarpetta" data-lang-en="Hi, I’m Mateo Scarpetta">Salut, je suis Mateo Scarpetta</h1>
             <p data-lang-fr="Je suis un <strong>programmeur de jeux vidéo</strong> passionné, spécialisé dans les <strong>systèmes réseau</strong> et l'<strong>architecture de code haute performance</strong>. Je me concentre sur la création de frameworks multijoueurs évolutifs et sur la garantie d'une synchronisation temps réel fluide entre les joueurs et les serveurs. Je suis fier d'écrire du code propre, efficace et fiable.<br><br>Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong>." data-lang-en="I’m a passionate <strong>game programmer</strong> specialized in <strong>network systems</strong> and <strong>high-performance code architecture</strong>. I focus on building scalable multiplayer frameworks, and ensuring seamless real-time synchronization across players and servers. I take pride in writing clean, efficient, and reliable code.<br><br>I am currently looking for an <strong>internship starting January 2026</strong>.">
@@ -74,9 +77,12 @@
             <span class="badge date-badge">2025</span>
             <span class="badge wip-badge">WIP</span>
           </div>
-          <img src="images/projects/lkznetwork.png" alt="LKZ Network Project">
+          <img src="assets/images/projects/lkznetwork.png" alt="LKZ Network Project">
           <div class="project-content">
-            <h3>LKZ Network</h3>
+            <div class="project-title-container">
+              <h3>LKZ Network</h3>
+              <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            </div>
             <p data-description
                data-lang-fr="Moteur réseau léger, efficace et haute performance pour le multijoueur en temps réel sur Windows et Linux."
                data-lang-en="Efficient lightweight, high-performance networking engine for real-time multiplayer on Windows and Linux."
@@ -90,14 +96,17 @@
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-video="assets/videos/deadprotocol.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
             <span class="badge wip-badge">WIP</span>
           </div>
-          <img src="images/projects/deadprotocol.png" alt="Dead Protocol Project">
+          <img src="assets/images/projects/deadprotocol.png" alt="Dead Protocol Project">
           <div class="project-content">
-            <h3>Dead Protocol</h3>
+            <div class="project-title-container">
+              <h3>Dead Protocol</h3>
+              <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            </div>
             <p data-description data-lang-fr="Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network." data-lang-en="Multiplayer Third-person shooter featuring my LKZ Network.">
               Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network.
             </p>
@@ -111,12 +120,15 @@
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
           </div>
-          <img src="images/projects/extractionz.jpg" alt="Extraction Z Project">
+          <img src="assets/images/projects/extractionz.jpg" alt="Extraction Z Project">
           <div class="project-content">
-            <h3>Extraction Z</h3>
+            <div class="project-title-container">
+              <h3>Extraction Z</h3>
+              <span class="people-tag" data-lang-fr="8 personnes" data-lang-en="8 persons">8 personnes</span>
+            </div>
             <p data-description data-lang-fr="FPS compétitif, mêlant jeu d'équipe et survie face aux zombies." data-lang-en="Competitive FPS, blending team play and zombie survival.">FPS compétitif, mêlant jeu d'équipe et survie face aux zombies.</p>
             <div class="project-tags">
-              <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">ECS</span><span class="tag">Netcode for Entities</span><span class="tag">Wwise</span>
+              <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Multiplayer</span><span class="tag">ECS</span><span class="tag">Netcode for Entities</span><span class="tag">Wwise</span>
             </div>
             </div>
         </div>
@@ -125,9 +137,12 @@
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
           </div>
-          <img src="images/projects/irondiver.png" alt="Iron Diver Project">
+          <img src="assets/images/projects/irondiver.png" alt="Iron Diver Project">
           <div class="project-content">
-            <h3>Iron Diver</h3>
+            <div class="project-title-container">
+              <h3>Iron Diver</h3>
+              <span class="people-tag" data-lang-fr="10 personnes" data-lang-en="10 persons">10 personnes</span>
+            </div>
             <p data-description data-lang-fr="Jeu d'exploration 2D avec combats et gestion de boutique." data-lang-en="2D exploration game with battles and shop management.">Jeu d'exploration 2D avec combats et gestion de boutique.</p>
             <div class="project-tags">
               <span class="tag">C++</span><span class="tag">SFML</span>
@@ -139,9 +154,12 @@
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
           </div>
-          <img src="images/projects/dungeonscape.png" alt="Dungeonscape Project">
+          <img src="assets/images/projects/dungeonscape.png" alt="Dungeonscape Project">
           <div class="project-content">
-            <h3>Dungeonscape</h3>
+            <div class="project-title-container">
+              <h3>Dungeonscape</h3>
+              <span class="people-tag" data-lang-fr="10 personnes" data-lang-en="10 persons">10 personnes</span>
+            </div>
             <p data-description data-lang-fr="Jeu de cartes en 2D." data-lang-en="2D Card game.">Jeu de cartes en 2D.</p>
             <div class="project-tags">
                <span class="tag">C++</span><span class="tag">SFML</span>
@@ -153,9 +171,12 @@
           <div class="card-badges">
             <span class="badge date-badge">2023</span>
           </div>
-          <img src="images/projects/dungeonscape.png" alt="Game Launcher Project">
+          <img src="assets/images/projects/dungeonscape.png" alt="Game Launcher Project">
           <div class="project-content">
-            <h3>Game Launcher</h3>
+            <div class="project-title-container">
+              <h3>Game Launcher</h3>
+              <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            </div>
             <p data-description data-lang-fr="Lanceur de jeux utilisant WPF." data-lang-en="Game launcher using WPF.">Lanceur de jeux utilisant WPF.</p>
             <div class="project-tags">
                <span class="tag">C#</span><span class="tag">WPF</span>
@@ -167,9 +188,12 @@
           <div class="card-badges">
             <span class="badge date-badge">2021</span>
           </div>
-          <img src="images/projects/dungeonscape.png" alt="Internship Prototype Project">
+          <img src="assets/images/projects/dungeonscape.png" alt="Internship Prototype Project">
           <div class="project-content">
-            <h3 data-lang-fr="Prototype de Jeu - Stage" data-lang-en="Game Prototype - Intern">Prototype de Jeu - Stage</h3>
+            <div class="project-title-container">
+              <h3 data-lang-fr="Prototype de Jeu - Stage" data-lang-en="Game Prototype - Intern">Prototype de Jeu - Stage</h3>
+              <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            </div>
             <p data-description data-lang-fr="Prototype développé lors d'un stage chez Ullo." data-lang-en="Prototype developed during internship at Ullo.">Prototype développé lors d'un stage chez Ullo.</p>
              <div class="project-tags">
                <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">VR</span>
@@ -282,16 +306,16 @@
       <a href="mailto:leikyz17@outlook.com" class="email-link">leikyz17@outlook.com</a>
       <div class="social-icons">
         <a href="https://github.com/leikyz" target="_blank" title="GitHub">
-          <img src="images/icon/github.png" alt="GitHub Icon">
+          <img src="assets/images/icon/github.png" alt="GitHub Icon">
         </a>
         <a href="https://www.linkedin.com/in/mat%C3%A9o-scarpetta-b43733247/" target="_blank" title="LinkedIn">
-          <img src="images/icon/linkedin.png" alt="LinkedIn Icon">
+          <img src="assets/images/icon/linkedin.png" alt="LinkedIn Icon">
         </a>
         <a href="assets/CV_Mateo_Scarpetta.pdf" target="_blank" title="CV">
-          <img src="images/icon/cv.png" alt="CV Icon" class="cv-icon">
+          <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon">
         </a>
       </div>
-      <p class="copyright" data-lang-fr="&copy; 2024 Mateo Scarpetta. Tous droits réservés." data-lang-en="&copy; 2024 Mateo Scarpetta. All rights reserved.">&copy; 2024 Mateo Scarpetta. Tous droits réservés.</p>
+      <p class="copyright" data-lang-fr="&copy; 2025 Mateo Scarpetta. Tous droits réservés." data-lang-en="&copy; 2025 Mateo Scarpetta. All rights reserved.">&copy; 2025 Mateo Scarpetta. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -300,6 +324,7 @@
     <div class="modal-content">
       <span class="modal-close">&times;</span>
       <img id="modal-img" src="" alt="Project Image">
+      <video id="modal-video" controls autoplay muted loop playsinline></video>
       <h3 id="modal-title"></h3>
       <p id="modal-description"></p>
     </div>
@@ -315,16 +340,17 @@
   <script>
     ScrollReveal().reveal('.section', {
       delay: 200,      
-      duration: 1000,   
+      duration: 1000,    
       distance: '50px', 
-      origin: 'bottom',   
+      origin: 'bottom', 
       easing: 'ease-in-out',
-      reset: false   
+      reset: false    
     });
 
+    // Back to Top Button Logic
     const backToTopButton = document.querySelector(".back-to-top");
-    window.addEventListener("scroll", () => {
 
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
         backToTopButton.classList.add("visible");
       } else {
@@ -371,18 +397,15 @@
         const windowHeight = window.innerHeight;
         const bodyHeight = document.body.offsetHeight;
 
-        // Prioritize the "Contact" section if at the very bottom of the page
         if ((scrollY + windowHeight) >= bodyHeight - 2) { 
           currentSectionId = 'contact';
         } else {
-          // Iterate through sections in reverse order to find the topmost visible section
-          // This prevents intermediate sections from being highlighted during scroll
           for (let i = sections.length - 1; i >= 0; i--) {
             const section = sections[i];
             const sectionTop = section.offsetTop;
             if (scrollY >= sectionTop - 150) { 
               currentSectionId = section.getAttribute('id');
-              break;
+              break; 
             }
           }
         }
@@ -405,13 +428,22 @@
       const menuToggle = document.getElementById('menu-toggle');
       const mainNav = document.getElementById('main-nav');
       const navLinks = mainNav.querySelectorAll('a');
+      
+      // Clone social icons and lang switcher for mobile menu
+      const socialIcons = document.querySelector('.header .social-icons').cloneNode(true);
+      const langSwitcher = document.querySelector('.header .lang-switcher').cloneNode(true);
+      document.querySelector('.social-icons-mobile').appendChild(socialIcons);
+      document.querySelector('.lang-switcher-mobile').appendChild(langSwitcher);
 
       menuToggle.addEventListener('click', function () {
         mainNav.classList.toggle('active');
       });
 
-      // Close menu when a link is clicked (for single-page navigation)
       navLinks.forEach(link => {
+        // Prevent cloning behavior for mobile-only elements
+        if(link.parentElement.classList.contains('social-icons-mobile') || link.parentElement.classList.contains('lang-switcher-mobile')) {
+            return;
+        }
         link.addEventListener('click', () => {
           mainNav.classList.remove('active');
         });
@@ -426,20 +458,21 @@
       const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
       const viewMoreButton = document.getElementById('view-more-projects');
 
+      // Re-select buttons to include cloned ones for mobile
+      const allLangButtons = document.querySelectorAll('.lang-btn');
+
+
       const setLanguage = (lang) => {
         translatableElements.forEach(el => {
-          const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1); // langFr or langEn
-          // Handle regular text content
+          const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1); 
           if (el.dataset[key]) {
             el.innerHTML = el.dataset[key];
           }
-          // Handle title attributes
-          if (el.dataset[key.toLowerCase() + 'Title']) { // data-lang-fr-title
+          if (el.dataset[key.toLowerCase() + 'Title']) { 
             el.title = el.dataset[key + 'Title'];
           }
         });
 
-        // Special handling for the view more button text
         if (viewMoreButton) {
             const isShowingMore = viewMoreButton.classList.contains('showing-less');
             if (isShowingMore) {
@@ -452,8 +485,7 @@
         }
 
         localStorage.setItem('language', lang);
-        // Update active class on buttons
-        langButtons.forEach(btn => {
+        allLangButtons.forEach(btn => {
             btn.classList.remove('active');
             if (btn.dataset.lang === lang) {
                 btn.classList.add('active');
@@ -461,14 +493,13 @@
         });
       };
 
-      langButtons.forEach(button => {
+      allLangButtons.forEach(button => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
           setLanguage(button.dataset.lang);
         });
       });
 
-      // Set initial language from storage or default to French
       const initialLang = localStorage.getItem('language') || 'fr';
       setLanguage(initialLang);
     });
@@ -479,37 +510,54 @@
     document.addEventListener('DOMContentLoaded', function() {
       const modal = document.getElementById('project-modal');
       const modalImg = document.getElementById('modal-img');
+      const modalVideo = document.getElementById('modal-video');
       const modalTitle = document.getElementById('modal-title');
       const modalDescription = document.getElementById('modal-description');
       const closeModalBtn = document.querySelector('.modal-close');
       const projectCards = document.querySelectorAll('.project-card');
 
       projectCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const img = card.querySelector('img').src;
+        card.addEventListener('click', function() {          
           const title = this.querySelector('h3').textContent;
           const pElement = this.querySelector('p[data-description]');
           const currentLang = localStorage.getItem('language') || 'fr';
           const description = pElement.dataset['modal' + currentLang.charAt(0).toUpperCase() + currentLang.slice(1)] || pElement.innerHTML;
+          
+          const videoSrc = this.dataset.video;
 
-          modalImg.src = img;
+          if (videoSrc) {
+            modalImg.style.display = 'none';
+            modalVideo.style.display = 'block';
+            modalVideo.src = videoSrc;
+            modalVideo.play();
+          } else {
+            modalVideo.style.display = 'none';
+            modalImg.style.display = 'block';
+            const img = card.querySelector('img').src;
+            modalImg.src = img;
+          }
+
           modalTitle.textContent = title;
           modalDescription.innerHTML = description;
 
           modal.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Prevent background scrolling
+          document.body.style.overflow = 'hidden';
         });
       });
 
       function closeModal() {
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        modalVideo.src = ""; 
+
         modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = ''; 
       }
 
       closeModalBtn.addEventListener('click', closeModal);
 
       modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal(); // Close if clicking on the background
+        if (e.target === modal) closeModal(); 
       });
     });
   </script>
