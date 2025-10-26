@@ -330,6 +330,10 @@ nav a.active {
   background-color: #ffc107;
   color: #1a1a1a;
 }
+.duration-badge {
+  background-color: #28a745;
+  color: white;
+}
 .project-card img {
   width: 100%;
   height: 200px;

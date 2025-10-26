@@ -57,7 +57,7 @@
           <h1 data-lang-fr="Salut, je suis Mateo Scarpetta" data-lang-en="Hi, I’m Mateo Scarpetta">Salut, je suis Mateo Scarpetta</h1>
             <p data-lang-fr="Je suis un <strong>programmeur de jeux vidéo</strong> passionné, spécialisé dans les <strong>systèmes réseau</strong> et l'<strong>architecture de code haute performance</strong>. Je me concentre sur la création de frameworks multijoueurs évolutifs et sur la garantie d'une synchronisation temps réel fluide entre les joueurs et les serveurs. Je suis fier d'écrire du code propre, efficace et fiable.<br><br>Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong>." data-lang-en="I’m a passionate <strong>game programmer</strong> specialized in <strong>network systems</strong> and <strong>high-performance code architecture</strong>. I focus on building scalable multiplayer frameworks, and ensuring seamless real-time synchronization across players and servers. I take pride in writing clean, efficient, and reliable code.<br><br>I am currently looking for an <strong>internship starting January 2026</strong>.">
                 Je suis un <strong>programmeur de jeux vidéo</strong> passionné, spécialisé dans les <strong>systèmes réseau</strong> 
-                et l'<strong>architecture de code haute performance</strong>. Je me concentre sur la création de frameworks multijoueurs 
+                et l'<strong>architecture de code haute performance</strong> et le. Je me concentre sur la création de frameworks multijoueurs 
                 évolutifs et sur la garantie d'une synchronisation temps réel fluide entre les joueurs et les serveurs. Je suis fier d'écrire 
                 du code propre, efficace et fiable.  <br><br>
                 Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong>.
@@ -72,7 +72,7 @@
 
       <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" data-video="assets/videos/lkznetwork.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
             <span class="badge wip-badge">WIP</span>
@@ -91,7 +91,8 @@
               Moteur réseau léger, efficace et haute performance pour le multijoueur en temps réel sur Windows et Linux.
             </p>
             <div class="project-tags">
-              <span class="tag">C++</span><span class="tag">Multithread</span><span class="tag">Serialization</span><span class="tag">ECS</span><span class="tag">IOCP</span><span class="tag">UDP</span><span class="tag">Matchmaking</span><span class="tag">Lobby</span>
+              <span class="tag">C++</span><span class="tag">Multithread</span><span class="tag">Serialization</span>
+              <span class="tag">ECS</span><span class="tag">IOCP</span><span class="tag">UDP</span><span class="tag">Recast Navigation</span><span class="tag">Matchmaking</span><span class="tag">Lobby</span>
             </div>
             </div>
         </div>
@@ -107,18 +108,22 @@
               <h3>Dead Protocol</h3>
               <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
             </div>
-            <p data-description data-lang-fr="Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network." data-lang-en="Multiplayer Third-person shooter featuring my LKZ Network.">
-              Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network.
-            </p>
+            <p data-description 
+               data-lang-fr="Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network." 
+               data-lang-en="Multiplayer Third-person shooter featuring my LKZ Network."
+               data-modal-fr="Dead Protocol est un jeu de tir à la troisième personne (TPS) multijoueur, conçu pour des équipes jusqu'à 4 joueurs. S'inspirant du style de jeu dynamique de Call of Duty Zombies, il plonge les joueurs dans une lutte intense pour la survie. Grâce à l'intégration de mon moteur réseau haute performance, LKZ Network, le jeu peut synchroniser des centaines d'entités simultanément, créant une immersion totale face à des hordes massives de zombies.<br><br><h4>Fonctionnalités Actuelles :</h4><ul><li><strong>IA en Réseau :</strong> Des zombies avec un comportement de poursuite entièrement synchronisé sur le réseau.</li><li><strong>Synchronisation Avancée :</strong> Mouvements et animations des personnages répliqués avec précision pour tous les joueurs.</li><li><strong>Animations Procédurales :</strong> Système d'animation procédurale pour une gestion réaliste et fluide de la visée et du maniement des armes.</li><li><strong>Outil de Création d'Armes :</strong> Un outil de création d'armes poussé pour configurer et adapter facilement tout type d'arme à feu.</li><li><strong>Architecture Client-Serveur :</strong> Un client C# (Unity) optimisé pour communiquer efficacement avec le serveur C++ (LKZ Network).</li><li><strong>Optimisation Réseau :</strong> Envoi et réception de paquets optimisés pour garantir une faible latence et une expérience de jeu fluide.</li></ul><h4>Objectifs Futurs :</h4><ul><li><strong>Hordes Massives :</strong> Intégration de hordes dynamiques inspirées de Days Gone, gérant des milliers d'ennemis simultanément.</li><li><strong>Progression et Atouts :</strong> Système de 'Power-ups' et d'atouts (perks) à la CoD Zombies pour améliorer les capacités des joueurs.</li><li><strong>Objectifs Évolutifs :</strong> Missions dynamiques et secrets à découvrir sur la carte pour enrichir l'expérience.</li><li><strong>Défense et Crafting :</strong> Implémentation d'un système de craft et de fortification de zones pour des stratégies de défense en équipe.</li><li><strong>Boss Uniques :</strong> Introduction de boss spéciaux avec des mécaniques de combat complexes.</li></ul>"
+               data-modal-en="Dead Protocol is a multiplayer third-person shooter (TPS) designed for teams of up to 4 players. Inspired by the dynamic gameplay of Call of Duty Zombies, it immerses players in an intense struggle for survival. By integrating my high-performance network engine, LKZ Network, the game can synchronize hundreds of entities simultaneously, creating total immersion against massive zombie hordes.<br><br><h4>Current Features:</h4><ul><li><strong>Networked AI:</strong> Zombies with fully synchronized chasing behavior over the network.</li><li><strong>Advanced Synchronization:</strong> Character movements and animations are accurately replicated for all players.</li><li><strong>Procedural Animations:</strong> A procedural animation system for realistic and fluid aiming and weapon handling.</li><li><strong>Weapon Creation Tool:</strong> An advanced weapon creation tool to easily configure and adapt any type of firearm.</li><li><strong>Client-Server Architecture:</strong> A C# client (Unity) optimized to communicate efficiently with the C++ server (LKZ Network).</li><li><strong>Network Optimization:</strong> Optimized packet sending and receiving to ensure low latency and a smooth gaming experience.</li></ul><h4>Future Goals:</h4><ul><li><strong>Massive Hordes:</strong> Integration of dynamic hordes inspired by Days Gone, managing hundreds of enemies simultaneously.</li><li><strong>Progression and Perks:</strong> A system of 'Power-ups' and perks like in CoD Zombies to enhance player abilities.</li><li><strong>Evolving Objectives:</strong> Dynamic missions and secrets to discover on the map to enrich the experience.</li><li><strong>Weapon Modification:</strong> Implementation of a weapon modification and improvement system.</li><li><strong>Unique Bosses:</strong> Introduction of special bosses with complex combat mechanics.</li></ul>"
+            >Jeu de tir à la troisième personne multijoueur utilisant mon LKZ Network.</p>
             <div class="project-tags">
               <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Procedural Animation</span><span class="tag">Multiplayer</span>
             </div>
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-video="assets/videos/extractionz.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
+            <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
           </div>
           <img src="assets/images/projects/extractionz.jpg" alt="Extraction Z Project">
           <div class="project-content">
@@ -126,16 +131,22 @@
               <h3>Extraction Z</h3>
               <span class="people-tag" data-lang-fr="8 personnes" data-lang-en="8 persons">8 personnes</span>
             </div>
-            <p data-description data-lang-fr="FPS compétitif, mêlant jeu d'équipe et survie face aux zombies." data-lang-en="Competitive FPS, blending team play and zombie survival.">FPS compétitif, mêlant jeu d'équipe et survie face aux zombies.</p>
+            <p data-description 
+               data-lang-fr="FPS compétitif, mêlant jeu d'équipe et survie face aux zombies." 
+               data-lang-en="Competitive FPS, blending team play and zombie survival."
+               data-modal-fr="Extraction Z est un FPS compétitif en 3v3 où deux équipes s'affrontent dans un environnement hostile peuplé de mutants. L'objectif est de localiser un artefact et de le ramener à sa base, tout en survivant aux hordes de zombies et aux assauts de l'équipe adverse.<br><br>Ce projet a représenté un défi technique majeur, réalisé par une équipe de seulement trois développeurs. Ce fut une opportunité d'apprentissage intensive, nous plongeant dans les nouvelles technologies d'Unity comme l'ECS (Entity Component System) et Netcode for Entities avec une expérience réseau limitée au départ. Ce challenge s'est avéré extrêmement enrichissant.<br><br><h4>Ma Contribution :</h4><ul><li><strong>Contrôleur FPS Avancé :</strong> Développement d'un contrôleur de personnage à la première personne avec une physique de joueur complexe.</li><li><strong>Contrôleur de Caméra :</strong> Création d'un système de caméra avancé pour une expérience de jeu fluide et immersive.</li><li><strong>Full Body Awareness :</strong> Implémentation d'un système de conscience corporelle complète personnalisé via des animations procédurales.</li><li><strong>Gestion des Armes :</strong> Conception du système de gestion des armes, incluant la mécanique de tir.</li><li><strong>Synchronisation Réseau :</strong> Prise en charge de la synchronisation des mouvements du joueur, des tirs et des effets visuels (VFX) avec Netcode for Entities.</li></ul>"
+               data-modal-en="Extraction Z is a competitive 3v3 FPS where two teams clash in a hostile, mutant-infested environment. The objective is to locate an artifact and bring it back to your base, all while surviving zombie hordes and fighting off the enemy team.<br><br>This project was a major technical challenge, undertaken by a team of just three developers. It was an intensive learning opportunity, diving into new Unity technologies like ECS (Entity Component System) and Netcode for Entities with limited prior networking experience. This challenge proved to be extremely rewarding.<br><br><h4>My Contribution:</h4><ul><li><strong>Advanced FPS Controller:</strong> Developed a first-person controller with complex player physics.</li><li><strong>Advanced Camera Controller:</strong> Created an advanced camera system for a smooth and immersive gameplay experience.</li><li><strong>Custom Full Body Awareness:</strong> Implemented a custom full body awareness system using procedural animation.</li><li><strong>Weapon Management:</strong> Designed the weapon handling system, including shooting mechanics.</li><li><strong>Network Synchronization:</strong> Handled the synchronization of player movements, shots, and visual effects (VFX) using Netcode for Entities.</li></ul>"
+            >FPS compétitif, mêlant jeu d'équipe et survie face aux zombies.</p>
             <div class="project-tags">
               <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Multiplayer</span><span class="tag">ECS</span><span class="tag">Netcode for Entities</span><span class="tag">Wwise</span>
             </div>
             </div>
         </div>
 
-        <div class="project-card project-hidden">
+        <div class="project-card project-hidden" data-video="assets/videos/irondiver.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
+            <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
           </div>
           <img src="assets/images/projects/irondiver.png" alt="Iron Diver Project">
           <div class="project-content">
@@ -143,41 +154,58 @@
               <h3>Iron Diver</h3>
               <span class="people-tag" data-lang-fr="10 personnes" data-lang-en="10 persons">10 personnes</span>
             </div>
-            <p data-description data-lang-fr="Jeu d'exploration 2D avec combats et gestion de boutique." data-lang-en="2D exploration game with battles and shop management.">Jeu d'exploration 2D avec combats et gestion de boutique.</p>
+            <p data-description 
+               data-lang-fr="Jeu d'exploration 2D avec combats et gestion de boutique." 
+               data-lang-en="2D exploration game with battles and shop management."
+               data-modal-fr="Iron Diver est un jeu d'aventure immersif où vous incarnez un astronaute échoué sur une planète inconnue. Pour survivre, vous devez construire et piloter un petit robot, explorer un environnement captivant, collecter des ressources et les échanger avec les habitants locaux. Ces échanges vous permettront de débloquer de nouvelles capacités et de personnaliser votre robot pour poursuivre votre voyage.<br><br><h4>Ma Contribution :</h4><ul><li><strong>Gestion de la Boutique :</strong> Conception et implémentation du système d'achat, de vente et d'échange de ressources avec les PNJ.</li><li><strong>Gestion des Boosts :</strong> Développement de la logique pour les améliorations et capacités temporaires du robot.</li><li><strong>Gestion des PNJ (Invités) :</strong> Programmation du comportement des habitants et de leurs interactions avec le joueur.</li><li><strong>Gestion des Sauvegardes :</strong> Création du système de sauvegarde et de chargement de la progression du joueur.</li></ul>"
+               data-modal-fr="Iron Diver est un jeu d'aventure immersif où vous incarnez un astronaute échoué sur une planète inconnue. Pour survivre, vous devez construire et piloter un petit robot, explorer un environnement captivant, collecter des ressources et les échanger avec les habitants locaux. Ces échanges vous permettront de débloquer de nouvelles capacités et de personnaliser votre robot pour poursuivre votre voyage.<br><br><h4>Ma Contribution :</h4><ul><li><strong>Système de Craft :</strong> Développement du système de fabrication d'objets et d'améliorations.</li><li><strong>Gestion de la Boutique :</strong> Conception et implémentation du système d'achat, de vente et d'échange de ressources avec les PNJ.</li><li><strong>Gestion des Boosts :</strong> Développement de la logique pour les améliorations et capacités temporaires du robot.</li><li><strong>Gestion des PNJ (Invités) :</strong> Programmation du comportement des habitants et de leurs interactions avec le joueur.</li><li><strong>Gestion des Sauvegardes :</strong> Création du système de sauvegarde et de chargement de la progression du joueur.</li></ul>"
+               data-modal-en="Iron Diver is an immersive adventure game where you play as an astronaut stranded on a mysterious planet. To survive, you must build and control a small robot, explore a captivating environment, collect resources, and trade them with local inhabitants. These trades will allow you to unlock new abilities and customize your robot to continue your journey.<br><br><h4>My Contribution:</h4><ul><li><strong>Crafting System:</strong> Development of the item and upgrade crafting system.</li><li><strong>Shop Management:</strong> Designed and implemented the system for buying, selling, and trading resources with NPCs.</li><li><strong>Boost Management:</strong> Developed the logic for the robot's temporary upgrades and abilities.</li><li><strong>Guest (NPC) Management:</strong> Programmed the behavior of the inhabitants and their interactions with the player.</li><li><strong>Save Management:</strong> Created the system for saving and loading the player's progress.</li></ul>"
+            >Jeu d'exploration 2D avec combats et gestion de boutique.</p>
             <div class="project-tags">
               <span class="tag">C++</span><span class="tag">SFML</span>
             </div>
             </div>
         </div>
 
-        <div class="project-card project-hidden">
+        <div class="project-card project-hidden" data-video="assets/videos/dungeonscape.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
+            <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
           </div>
           <img src="assets/images/projects/dungeonscape.png" alt="Dungeonscape Project">
           <div class="project-content">
             <div class="project-title-container">
-              <h3>Dungeonscape</h3>
+              <h3>DungeonScape</h3>
               <span class="people-tag" data-lang-fr="10 personnes" data-lang-en="10 persons">10 personnes</span>
             </div>
-            <p data-description data-lang-fr="Jeu de cartes en 2D." data-lang-en="2D Card game.">Jeu de cartes en 2D.</p>
+            <p data-description 
+               data-lang-fr="Jeu de cartes en 2D." 
+               data-lang-en="2D Card game built with C++ and SFML."
+               data-modal-fr="Dungeonscape est un jeu de cartes et d'exploration de donjon en 2D, développé en C++ avec la bibliothèque SFML. Dans ce jeu au tour par tour, les joueurs choisissent parmi quatre héros, chacun avec des capacités uniques, pour s'aventurer dans un donjon. L'objectif est d'atteindre la fin avant l'écoulement du chronomètre, en utilisant stratégiquement un deck de cartes pour surmonter les obstacles.<br><br><h4>Ma Contribution :</h4><ul><li><strong>Gestion des Cartes :</strong> Implémentation de la logique pour piocher, jouer et défausser les cartes.</li><li><strong>Gestion du Deck :</strong> Développement du système permettant aux joueurs de construire et gérer leur deck.</li><li><strong>Interface Utilisateur (UI) :</strong> Création des éléments d'interface en jeu, comme la main du joueur, les points de vie et le chronomètre.</li></ul>"
+               data-modal-en="Dungeonscape is a 2D dungeon-crawling card game developed in C++ with the SFML library. In this turn-based game, players choose from four distinct heroes, each with unique abilities, to venture into a dungeon. The objective is to reach the end before the timer runs out, strategically using a deck of cards to overcome obstacles.<br><br><h4>My Contribution:</h4><ul><li><strong>Card Management:</strong> Implemented the logic for drawing, playing, and discarding cards.</li><li><strong>Deck Management:</strong> Developed the system allowing players to build and manage their deck.</li><li><strong>In-Game UI:</strong> Created the in-game interface elements, such as the player's hand, health points, and the timer.</li></ul>"
+            >Jeu de cartes en 2D.</p>
             <div class="project-tags">
                <span class="tag">C++</span><span class="tag">SFML</span>
             </div>
             </div>
         </div>
 
-        <div class="project-card project-hidden">
+        <div class="project-card project-hidden" data-video="assets/videos/launcher.mp4">
           <div class="card-badges">
             <span class="badge date-badge">2023</span>
           </div>
-          <img src="assets/images/projects/dungeonscape.png" alt="Game Launcher Project">
+          <img src="assets/images/projects/launcher.png" alt="Game Launcher Project">
           <div class="project-content">
             <div class="project-title-container">
               <h3>Game Launcher</h3>
               <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
             </div>
-            <p data-description data-lang-fr="Lanceur de jeux utilisant WPF." data-lang-en="Game launcher using WPF.">Lanceur de jeux utilisant WPF.</p>
+            <p data-description 
+               data-lang-fr="Lanceur de jeux utilisant WPF." 
+               data-lang-en="Game launcher using WPF."
+               data-modal-fr="Ce lanceur de jeux, développé en C# avec WPF, est une solution complète pour la distribution et la gestion de jeux. Il automatise le téléchargement et l'installation des jeux depuis un serveur distant, tout en optimisant le processus grâce à un système de vérification de fichiers intelligent : seuls les fichiers nouveaux ou modifiés sont téléchargés, assurant des mises à jour rapides et efficaces.<br><br><h4>Fonctionnalités Clés :</h4><ul><li><strong>Gestion des Fichiers :</strong> Télécharge, installe et vérifie automatiquement les fichiers du jeu par rapport à un manifeste distant. Une option de 'Réparation' permet de forcer une ré-vérification complète pour corriger les fichiers corrompus ou manquants.</li><li><strong>Interface Utilisateur :</strong> Affiche les dernières actualités du jeu et une barre de progression visuelle pour suivre les téléchargements.</li><li><strong>Intégration Système :</strong> Se connecte à Discord pour mettre à jour le statut de l'utilisateur (Rich Presence), peut être minimisé dans la barre des tâches et propose un menu contextuel pour un accès rapide aux fonctions essentielles (Lancer le jeu, Réparer, Quitter).</li><li><strong>Paramètres :</strong> Offre des raccourcis pour ouvrir le dossier du jeu, accéder au site web et au Discord, et une option pour se lancer au démarrage de Windows.</li></ul><h4>Technologies Utilisées :</h4><ul><li><strong>Langage : </strong> C# / .NET</li><li><strong>UI : </strong> WPF (Windows Presentation Foundation)</li><li><strong>Intégrations : </strong> DiscordRPC-Sharp pour le Rich Presence, HttpClient pour les téléchargements asynchrones.</li></ul>"
+               data-modal-en="This game launcher, developed in C# with WPF, is a complete solution for game distribution and management. It automates the download and installation of games from a remote server, while optimizing the process with a smart file verification system: only new or modified files are downloaded, ensuring fast and efficient updates.<br><br><h4>Key Features:</h4><ul><li><strong>File Management:</strong> Automatically downloads, installs, and verifies game files against a remote manifest. A 'Repair' option allows forcing a full re-check to fix corrupted or missing files.</li><li><strong>User Interface:</strong> Displays the latest game news and a visual progress bar to track downloads.</li><li><strong>System Integration:</strong> Connects to Discord to update the user's status (Rich Presence), can be minimized to the system tray, and offers a context menu for quick access to essential functions (Launch Game, Repair, Exit).</li><li><strong>Settings:</strong> Provides shortcuts to open the game folder, access the website and Discord, and an option to launch on Windows startup.</li></ul><h4>Technology Stack:</h4><ul><li><strong>Language : </strong> C# / .NET</li><li><strong>UI : </strong> WPF (Windows Presentation Foundation)</li><li><strong>Integrations : </strong> DiscordRPC-Sharp for Rich Presence, HttpClient for asynchronous downloads.</li></ul>"
+            >Lanceur de jeux utilisant WPF.</p>
             <div class="project-tags">
                <span class="tag">C#</span><span class="tag">WPF</span>
             </div>
@@ -188,13 +216,18 @@
           <div class="card-badges">
             <span class="badge date-badge">2021</span>
           </div>
-          <img src="assets/images/projects/dungeonscape.png" alt="Internship Prototype Project">
+          <img src="assets/images/projects/proto.png" alt="Internship Prototype Project">
           <div class="project-content">
             <div class="project-title-container">
               <h3 data-lang-fr="Prototype de Jeu - Stage" data-lang-en="Game Prototype - Intern">Prototype de Jeu - Stage</h3>
               <span class="people-tag" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
             </div>
-            <p data-description data-lang-fr="Prototype développé lors d'un stage chez Ullo." data-lang-en="Prototype developed during internship at Ullo.">Prototype développé lors d'un stage chez Ullo.</p>
+            <p data-description 
+               data-lang-fr="Prototype développé lors d'un stage chez Ullo." 
+               data-lang-en="Prototype developed during internship at Ullo."
+               data-modal-fr="Ce projet a été réalisé sur Unity durant mon stage de 5 semaines au sein de l'entreprise Ullo. C'est un jeu exploitant le neurofeedback (modulation de l'activité cérébrale) en combinant un Oculus Quest, un bandeau Muse pour l'activité cérébrale, et une montre connectée pour le rythme respiratoire.<br><br>Ce stage m'a permis de découvrir en profondeur Unity, de me familiariser avec le moteur et le monde de la VR, et d'explorer comment les données corporelles, notamment cérébrales, peuvent être exploitées pour créer des expériences de jeu uniques.<br><br><h4>Fonctionnalités Implémentées :</h4><ul><li><strong>Gameplay basé sur le Neurofeedback :</strong> La capacité de voler est directement liée aux fréquences cérébrales du joueur.</li><li><strong>Création d'Environnement :</strong> Mise en place du monde de jeu avec terrain, ciel personnalisable et plateformes.</li><li><strong>Interaction Dynamique :</strong> Les objets du jeu changent de position et de forme en fonction des données de neurofeedback.</li><li><strong>Système de Collectibles :</strong> Intégration de pièces à récupérer avec un compteur de score.</li><li><strong>Interface Utilisateur :</strong> Création d'une UI permettant de configurer différents paramètres du jeu.</li></ul>"
+               data-modal-en="This project was developed in Unity during my 5-week internship at Ullo. It's a game that utilizes neurofeedback (brain activity modulation) by combining an Oculus Quest, a Muse headband for brain activity, and a smartwatch for breathing rhythm.<br><br>This internship allowed me to gain in-depth knowledge of Unity, become more familiar with the engine and the world of VR, and explore how bodily data, especially from the brain, can be leveraged to create unique gaming experiences.<br><br><h4>Implemented Features:</h4><ul><li><strong>Neurofeedback-Based Gameplay:</strong> The ability to fly is directly linked to the player's brain frequencies.</li><li><strong>Environment Creation:</strong> Set up the game world with terrain, a customizable sky, and platforms.</li><li><strong>Dynamic Interaction:</strong> Game objects change position and shape based on neurofeedback data.</li><li><strong>Collectible System:</strong> Integrated collectible coins with a score counter.</li><li><strong>User Interface:</strong> Created a UI to configure various game settings.</li></ul>"
+            >Prototype développé lors d'un stage chez Ullo.</p>
              <div class="project-tags">
                <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">VR</span>
             </div>
@@ -533,8 +566,8 @@
           } else {
             modalVideo.style.display = 'none';
             modalImg.style.display = 'block';
-            const img = card.querySelector('img').src;
-            modalImg.src = img;
+            const modalImageSrc = this.dataset.modalImage || card.querySelector('img').src;
+            modalImg.src = modalImageSrc;
           }
 
           modalTitle.textContent = title;
