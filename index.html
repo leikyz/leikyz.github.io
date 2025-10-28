@@ -9,26 +9,24 @@
 <body>
   <header>
   <div class="container">
-    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="lang-switcher">
-      <a href="#" class="lang-btn" data-lang="fr">FR</a>
-      <span>|</span>
-      <a href="#" class="lang-btn" data-lang="en">EN</a>
+    <div class="lang-toggle" aria-label="Switch language" role="button">
+      <span class="lang-option">FR</span>
+      <span class="lang-option">EN</span>
+      <span class="lang-slider"></span>
     </div>
+     <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+       <span></span>
+       <span></span>
+       <span></span>
+     </button>
     <nav id="main-nav">
       <a href="#about" data-lang-fr="À propos" data-lang-en="About">À propos</a>
       <a href="#projects" data-lang-fr="Projets" data-lang-en="Projects">Projets</a>
       <a href="#skills" data-lang-fr="Compétences" data-lang-en="Skills">Compétences</a>
-      <a href="#experiences" data-lang-fr="Expériences" data-lang-en="Experiences">Expériences</a>
-      <a href="#parcours" data-lang-fr="Parcours" data-lang-en="Parcours">Parcours</a>
+      <a href="#experience" data-lang-fr="Parcours" data-lang-en="Experience">Parcours</a>
       <a href="#contact" data-lang-fr="Contact" data-lang-en="Contact">Contact</a>
       <!-- Mobile only -->
-      <div class="social-icons-mobile"></div>
-      <div class="lang-switcher-mobile"></div>
+      <div class="mobile-only-container"></div>
     </nav>
     <div class="social-icons">
       <a href="https://github.com/leikyz" target="_blank" title="GitHub">
@@ -37,8 +35,8 @@
       <a href="https://www.linkedin.com/in/mat%C3%A9o-scarpetta-b43733247/" target="_blank" title="LinkedIn">
         <img src="assets/images/icon/linkedin.png" alt="LinkedIn Icon">
       </a>
-      <a href="assets/CV_Mateo_Scarpetta.pdf" target="_blank" title="CV">
-        <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon">
+      <a href="assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="assets/EN_CV_MATEO_SCARPETTA.pdf">
+        <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
       </a>
       <a href="mailto:leikyz17@outlook.com" title="Email">
         <img src="assets/images/icon/email.png" alt="Mail Icon">
@@ -51,16 +49,12 @@
   <main>
     <!-- ABOUT -->
     <section id="about" class="section about">
+      <h1 data-lang-fr="Mateo Scarpetta - Développeur Gameplay &amp; Réseau" data-lang-en="Mateo Scarpetta - Gameplay &amp; Network Developer">Mateo Scarpetta - Développeur Gameplay &amp; Réseau</h1>
       <div class="about-container">
         <img src="assets/images/me2.jpg" alt="Your photo" class="profile-pic" />
         <div class="about-text">
-          <h1 data-lang-fr="Salut, je suis Mateo Scarpetta" data-lang-en="Hi, I’m Mateo Scarpetta">Salut, je suis Mateo Scarpetta</h1>
-            <p data-lang-fr="Je suis un <strong>programmeur de jeux vidéo</strong> passionné, spécialisé dans les <strong>systèmes réseau</strong> et l'<strong>architecture de code haute performance</strong>. Je me concentre sur la création de frameworks multijoueurs évolutifs et sur la garantie d'une synchronisation temps réel fluide entre les joueurs et les serveurs. Je suis fier d'écrire du code propre, efficace et fiable.<br><br>Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong>." data-lang-en="I’m a passionate <strong>game programmer</strong> specialized in <strong>network systems</strong> and <strong>high-performance code architecture</strong>. I focus on building scalable multiplayer frameworks, and ensuring seamless real-time synchronization across players and servers. I take pride in writing clean, efficient, and reliable code.<br><br>I am currently looking for an <strong>internship starting January 2026</strong>.">
-                Je suis un <strong>programmeur de jeux vidéo</strong> passionné, spécialisé dans les <strong>systèmes réseau</strong> 
-                et l'<strong>architecture de code haute performance</strong> et le. Je me concentre sur la création de frameworks multijoueurs 
-                évolutifs et sur la garantie d'une synchronisation temps réel fluide entre les joueurs et les serveurs. Je suis fier d'écrire 
-                du code propre, efficace et fiable.  <br><br>
-                Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong>.
+            <p data-lang-fr="Programmeur passionné, je me spécialise dans la programmation <strong>gameplay</strong> et les <strong>systèmes réseau</strong>. À l'aise en C++ comme en C#, je conçois des solutions robustes, de l'architecture de code haute performance à l'optimisation de la synchronisation temps réel. Mon approche consiste à transformer des défis techniques complexes en code propre, performant et fiable.<br><br>Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong> pour mettre ma rigueur et ma créativité au service de projets ambitieux." data-lang-en="As a passionate programmer, I specialize in <strong>gameplay</strong> and <strong>network systems</strong> programming. Comfortable with both C++ and C#, I design robust solutions, from high-performance code architecture to real-time synchronization optimization. My approach is to turn complex technical challenges into clean, high-performance, and reliable code.<br><br>I am currently looking for an <strong>internship starting in January 2026</strong> to apply my rigor and creativity to ambitious projects.">
+                Programmeur passionné, je me spécialise dans la programmation <strong>gameplay</strong> et les <strong>systèmes réseau</strong>. À l'aise en C++ comme en C#, je conçois des solutions robustes, de l'architecture de code haute performance à l'optimisation de la synchronisation temps réel. Mon approche consiste à transformer des défis techniques complexes en code propre, performant et fiable.<br><br>Je suis actuellement à la recherche d'un <strong>stage débutant en janvier 2026</strong> pour mettre ma rigueur et ma créativité au service de projets ambitieux.
             </p>
 
         </div>
@@ -73,6 +67,7 @@
       <div class="projects-grid">
 
         <div class="project-card" data-video="assets/videos/lkznetwork.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
             <span class="badge wip-badge">WIP</span>
@@ -95,9 +90,11 @@
               <span class="tag">ECS</span><span class="tag">IOCP</span><span class="tag">UDP</span><span class="tag">Recast Navigation</span><span class="tag">Matchmaking</span><span class="tag">Lobby</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card" data-video="assets/videos/deadprotocol.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
             <span class="badge wip-badge">WIP</span>
@@ -118,9 +115,11 @@
               <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Procedural Animation</span><span class="tag">Multiplayer</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card" data-video="assets/videos/extractionz.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2025</span>
             <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
@@ -141,9 +140,11 @@
               <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Multiplayer</span><span class="tag">ECS</span><span class="tag">Netcode for Entities</span><span class="tag">Wwise</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card project-hidden" data-video="assets/videos/irondiver.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
             <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
@@ -165,9 +166,11 @@
               <span class="tag">C++</span><span class="tag">SFML</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card project-hidden" data-video="assets/videos/dungeonscape.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2024</span>
             <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
@@ -188,9 +191,11 @@
                <span class="tag">C++</span><span class="tag">SFML</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card project-hidden" data-video="assets/videos/launcher.mp4">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2023</span>
           </div>
@@ -210,9 +215,11 @@
                <span class="tag">C#</span><span class="tag">WPF</span>
             </div>
             </div>
+          </div>
         </div>
 
         <div class="project-card project-hidden">
+          <div class="card-content-wrapper">
           <div class="card-badges">
             <span class="badge date-badge">2021</span>
           </div>
@@ -232,6 +239,7 @@
                <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">VR</span>
             </div>
             </div>
+          </div>
         </div>
 
       </div>
@@ -257,7 +265,7 @@
           <h3 data-lang-fr="Langues" data-lang-en="Languages">Langues</h3>
           <div class="skill-tags">
             <span class="tag" data-lang-fr="Français (Natif)" data-lang-en="French (Native)">Français (Natif)</span>
-            <span class="tag" data-lang-fr="Anglais (B1)" data-lang-en="English (B1)">Anglais (B1)</span>
+            <span class="tag" data-lang-fr="Anglais (B2)" data-lang-en="English (B1)">Anglais (B2)</span>
           </div>
         </div>
         
@@ -282,11 +290,21 @@
       </div>
     </section>
 
-    <!-- EXPERIENCES -->
-    <section id="experiences" class="section parcours">
-      <h2 data-lang-fr="Expériences" data-lang-en="Experiences">Expériences</h2>
+    <!-- CAREER PATH (Experiences & Education) -->
+    <section id="experience" class="section parcours">
+      <h2 data-lang-fr="Parcours & Expériences" data-lang-en="Experience & Education">Parcours & Expériences</h2>
       <div class="parcours-container">
-        <div class="parcours-card">
+        <!-- Education Card -->
+        <div class="parcours-card education-card">
+          <div class="parcours-info">
+            <h3 data-lang-fr="Bachelor en Programmation de Jeux Vidéo" data-lang-en="Bachelor in Game Programming">Bachelor en Programmation de Jeux Vidéo</h3>
+            <p class="location">Creajeux - Nîmes, France</p>
+          </div>
+          <div class="parcours-date">2023 - 2026</div>
+        </div>
+
+        <!-- Experience Card -->
+        <div class="parcours-card experience-card">
           <div class="parcours-info">
             <h3 data-lang-fr="Stagiaire Programmeur de Jeux" data-lang-en="Game Programmer Intern">Stagiaire Programmeur de Jeux</h3>
             <p class="location">Ullo - La Rochelle, France</p>
@@ -296,29 +314,18 @@
           </div>
           <div class="parcours-date" data-lang-fr="5 semaines - 2021" data-lang-en="5 weeks - 2021">2021</div>
         </div>
-        <!-- Vous pourrez ajouter d'autres expériences ici -->
-      </div>
-    </section>
 
-    <!-- PARCOURS -->
-    <section id="parcours" class="section parcours">
-      <h2 data-lang-fr="Parcours" data-lang-en="Parcours">Parcours</h2>
-      <div class="parcours-container">
-        <div class="parcours-card">
-          <div class="parcours-info">
-            <h3 data-lang-fr="Bachelor en Programmation de Jeux Vidéo" data-lang-en="Bachelor in Game Programming">Bachelor en Programmation de Jeux Vidéo</h3>
-            <p class="location">Creajeux - Nîmes, France</p>
-          </div>
-          <div class="parcours-date">2023 - 2026</div>
-        </div>
-        <div class="parcours-card">
+        <!-- Education Card -->
+        <div class="parcours-card education-card">
           <div class="parcours-info">
             <h3 data-lang-fr="BTS SIO – SLAM" data-lang-en="Two-year Technical Degree in IT (BTS SIO – SLAM)">BTS SIO – SLAM</h3>
             <p class="location">High School of Venise Verte - Niort, France</p>
           </div>
           <div class="parcours-date">2020 - 2022</div>
         </div>
-        <div class="parcours-card">
+
+        <!-- Education Card -->
+        <div class="parcours-card education-card">
           <div class="parcours-info">
             <h3 data-lang-fr="Baccalauréat Français, mention bien" data-lang-en="French Baccalaureate, with honours">Baccalauréat Français, mention bien</h3>
             <p class="location">High School Léonce Vieljeux - La Rochelle, France</p>
@@ -344,8 +351,8 @@
         <a href="https://www.linkedin.com/in/mat%C3%A9o-scarpetta-b43733247/" target="_blank" title="LinkedIn">
           <img src="assets/images/icon/linkedin.png" alt="LinkedIn Icon">
         </a>
-        <a href="assets/CV_Mateo_Scarpetta.pdf" target="_blank" title="CV">
-          <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon">
+        <a href="assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="assets/EN_CV_MATEO_SCARPETTA.pdf">
+          <img src="assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
         </a>
       </div>
       <p class="copyright" data-lang-fr="&copy; 2025 Mateo Scarpetta. Tous droits réservés." data-lang-en="&copy; 2025 Mateo Scarpetta. All rights reserved.">&copy; 2025 Mateo Scarpetta. Tous droits réservés.</p>
@@ -391,156 +398,147 @@
       }
     });
   </script>
-
-  <!-- View More/Less Projects Script -->
+  
+  <!-- Main Application Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const viewMoreBtn = document.getElementById('view-more-projects');
-      const hiddenProjects = document.querySelectorAll('.project-hidden');
 
-      viewMoreBtn.addEventListener('click', function () {
-        const isShowingMore = this.classList.toggle('showing-less');
-
-        const currentLang = localStorage.getItem('language') || 'fr';
-
-        if (isShowingMore) {
-          const key = 'lang' + currentLang.charAt(0).toUpperCase() + currentLang.slice(1) + 'Text';
-          this.textContent = this.dataset[key];
-        } else {
-          const key = 'lang' + currentLang.charAt(0).toUpperCase() + currentLang.slice(1);
-          this.textContent = this.dataset[key];
-        }
-
-        hiddenProjects.forEach(project => {
-          project.classList.toggle('visible');
-        });
-      });
-    });
-  </script>
-
-  <!-- Active Nav Link on Scroll Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const sections = document.querySelectorAll('section[id], footer[id]');
-      const navLinks = document.querySelectorAll('nav a');
-
-      const onScroll = () => {
-        let currentSectionId = '';
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const bodyHeight = document.body.offsetHeight;
-
-        if ((scrollY + windowHeight) >= bodyHeight - 2) { 
-          currentSectionId = 'contact';
-        } else {
-          for (let i = sections.length - 1; i >= 0; i--) {
-            const section = sections[i];
-            const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop - 150) { 
-              currentSectionId = section.getAttribute('id');
-              break; 
-            }
-          }
-        }
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + currentSectionId) {
-            link.classList.add('active');
-          }
-        });
-      };
-
-      window.addEventListener('scroll', onScroll);
-      onScroll(); 
-    });
-  </script>
-
-  <!-- Responsive Menu Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
+      // --- Responsive Menu ---
       const menuToggle = document.getElementById('menu-toggle');
       const mainNav = document.getElementById('main-nav');
-      const navLinks = mainNav.querySelectorAll('a');
-      
+
       // Clone social icons and lang switcher for mobile menu
-      const socialIcons = document.querySelector('.header .social-icons').cloneNode(true);
-      const langSwitcher = document.querySelector('.header .lang-switcher').cloneNode(true);
-      document.querySelector('.social-icons-mobile').appendChild(socialIcons);
-      document.querySelector('.lang-switcher-mobile').appendChild(langSwitcher);
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
 
       menuToggle.addEventListener('click', function () {
-        mainNav.classList.toggle('active');
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
       });
 
-      navLinks.forEach(link => {
-        // Prevent cloning behavior for mobile-only elements
-        if(link.parentElement.classList.contains('social-icons-mobile') || link.parentElement.classList.contains('lang-switcher-mobile')) {
-            return;
-        }
-        link.addEventListener('click', () => {
+      // Close menu when a navigation link (not a language button) is clicked
+      mainNav.addEventListener('click', (e) => {
+        // Only close if a navigation link is clicked, not the language toggle
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
           mainNav.classList.remove('active');
-        });
-      });
-    });
-  </script>
-
-  <!-- Language Switcher Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const langButtons = document.querySelectorAll('.lang-btn');
-      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
-      const viewMoreButton = document.getElementById('view-more-projects');
-
-      // Re-select buttons to include cloned ones for mobile
-      const allLangButtons = document.querySelectorAll('.lang-btn');
-
-
-      const setLanguage = (lang) => {
-        translatableElements.forEach(el => {
-          const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1); 
-          if (el.dataset[key]) {
-            el.innerHTML = el.dataset[key];
-          }
-          if (el.dataset[key.toLowerCase() + 'Title']) { 
-            el.title = el.dataset[key + 'Title'];
-          }
-        });
-
-        if (viewMoreButton) {
-            const isShowingMore = viewMoreButton.classList.contains('showing-less');
-            if (isShowingMore) {
-                const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1) + 'Text'; // langFrText or langEnText
-                viewMoreButton.textContent = viewMoreButton.dataset[key];
-            } else {
-                const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1); // langFr or langEn
-                viewMoreButton.textContent = viewMoreButton.dataset[key];
-            }
+          menuToggle.setAttribute('aria-expanded', 'false');
         }
-
-        localStorage.setItem('language', lang);
-        allLangButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            }
-        });
-      };
-
-      allLangButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-          e.preventDefault();
-          setLanguage(button.dataset.lang);
-        });
       });
 
-      const initialLang = localStorage.getItem('language') || 'fr';
-      setLanguage(initialLang);
-    });
-  </script>
+      // --- Language Switcher ---
+      (function setupLangSwitcher() {
+        const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+        const viewMoreButton = document.getElementById('view-more-projects');
+        const cvLinks = document.querySelectorAll('.cv-link');
+        const langToggles = document.querySelectorAll('.lang-toggle');
 
-  <!-- Project Modal Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+        const setLanguage = (lang) => {
+          translatableElements.forEach(el => {
+            const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+            if (el.dataset[key]) {
+              el.innerHTML = el.dataset[key];
+            }
+            if (el.dataset[key.toLowerCase() + 'Title']) {
+              el.title = el.dataset[key + 'Title'];
+            }
+          });
+
+          if (viewMoreButton) {
+            const isShowingMore = viewMoreButton.classList.contains('showing-less');
+            const textKey = isShowingMore ? `lang${lang.charAt(0).toUpperCase() + lang.slice(1)}Text` : `lang${lang.charAt(0).toUpperCase() + lang.slice(1)}`;
+            viewMoreButton.textContent = viewMoreButton.dataset[textKey];
+          }
+
+          // Update CV links
+          cvLinks.forEach(link => {
+            const cvPath = link.dataset['cv' + lang];
+            if (cvPath) link.href = cvPath;
+          });
+
+          document.documentElement.lang = lang;
+
+          localStorage.setItem('language', lang);
+          
+          // Update toggle state
+          langToggles.forEach(toggle => {
+            if (lang === 'en') {
+              toggle.classList.add('lang-en');
+            } else {
+              toggle.classList.remove('lang-en');
+            }
+          });
+        };
+
+        document.body.addEventListener('click', function(e) {
+            if (e.target.closest('.lang-toggle')) {
+                const currentLang = localStorage.getItem('language') || 'fr';
+                const newLang = currentLang === 'fr' ? 'en' : 'fr';
+                setLanguage(newLang);
+            }
+        });
+
+        const initialLang = localStorage.getItem('language') || 'fr';
+        setLanguage(initialLang);
+      })();
+
+      // --- View More/Less Projects ---
+      (function setupViewMore() {
+        const viewMoreBtn = document.getElementById('view-more-projects');
+        const hiddenProjects = document.querySelectorAll('.project-hidden');
+        if (!viewMoreBtn) return;
+
+        viewMoreBtn.addEventListener('click', function () {
+          this.classList.toggle('showing-less');
+          // The language switcher will handle updating the button text
+          const currentLang = localStorage.getItem('language') || 'fr';
+          const isShowingMore = this.classList.contains('showing-less');
+          const textKey = isShowingMore ? `lang${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}Text` : `lang${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`;
+          this.textContent = this.dataset[textKey];
+
+          hiddenProjects.forEach(project => {
+            project.classList.toggle('visible');
+          });
+        });
+      })();
+
+      // --- Active Nav Link on Scroll ---
+      (function setupScrollSpy() {
+        const sections = document.querySelectorAll('section[id], footer[id]');
+        const navLinks = document.querySelectorAll('#main-nav a[href^="#"]');
+
+        const onScroll = () => {
+          let currentSectionId = '';
+          const scrollY = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const bodyHeight = document.body.offsetHeight;
+
+          if ((scrollY + windowHeight) >= bodyHeight - 2) {
+            currentSectionId = 'contact';
+          } else {
+            for (let i = sections.length - 1; i >= 0; i--) {
+              const section = sections[i];
+              const sectionTop = section.offsetTop;
+              if (scrollY >= sectionTop - 150) {
+                currentSectionId = section.getAttribute('id');
+                break;
+              }
+            }
+          }
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentSectionId);
+          });
+        };
+
+        window.addEventListener('scroll', onScroll);
+        onScroll(); // Initial check
+      })();
+
+      // --- Project Modal ---
       const modal = document.getElementById('project-modal');
       const modalImg = document.getElementById('modal-img');
       const modalVideo = document.getElementById('modal-video');
@@ -550,12 +548,11 @@
       const projectCards = document.querySelectorAll('.project-card');
 
       projectCards.forEach(card => {
-        card.addEventListener('click', function() {          
+        card.addEventListener('click', function() {
           const title = this.querySelector('h3').textContent;
           const pElement = this.querySelector('p[data-description]');
           const currentLang = localStorage.getItem('language') || 'fr';
           const description = pElement.dataset['modal' + currentLang.charAt(0).toUpperCase() + currentLang.slice(1)] || pElement.innerHTML;
-          
           const videoSrc = this.dataset.video;
 
           if (videoSrc) {
@@ -580,19 +577,19 @@
 
       function closeModal() {
         modalVideo.pause();
-        modalVideo.currentTime = 0;
-        modalVideo.src = ""; 
+        modalVideo.currentTime = 0; 
+        modalVideo.src = "";
 
         modal.classList.remove('active');
-        document.body.style.overflow = ''; 
+        document.body.style.overflow = '';
       }
 
       closeModalBtn.addEventListener('click', closeModal);
-
       modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal(); 
+        if (e.target === modal) closeModal();
       });
     });
   </script>
+
 </body>
 </html>
