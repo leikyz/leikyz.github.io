@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LKZ Online Services — Mateo Scarpetta</title>
+  <meta name="description" content="Couche de services en ligne reliant Dead Protocol à LKZ Network — sessions, profils joueurs et état global.">
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="project-page">
+  <header>
+    <div class="container">
+      <a href="../index#about" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MS<span class="logo-slash"> /</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="../index#about"><span class="nav-num">01.</span><span data-lang-fr="À propos" data-lang-en="About">À propos</span></a>
+        <a href="../index#projects"><span class="nav-num">02.</span><span data-lang-fr="Projets" data-lang-en="Projects">Projets</span></a>
+        <a href="../index#skills"><span class="nav-num">03.</span><span data-lang-fr="Compétences" data-lang-en="Skills">Compétences</span></a>
+        <a href="../index#experience"><span class="nav-num">04.</span><span data-lang-fr="Parcours" data-lang-en="Experience">Parcours</span></a>
+        <a href="../index#contact"><span class="nav-num">05.</span><span data-lang-fr="Contact" data-lang-en="Contact">Contact</span></a>
+        <div class="mobile-only-container"></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-toggle" aria-label="Switch language" role="button">
+          <span class="lang-option">FR</span>
+          <span class="lang-option">EN</span>
+          <span class="lang-slider"></span>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/leikyz" target="_blank" title="GitHub">
+            <img src="../assets/images/icon/github.png" alt="GitHub Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
+            <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
+          </a>
+          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+            <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
+          </a>
+          <a href="mailto:leikyz17@outlook.com" title="Email">
+            <img src="../assets/images/icon/email.png" alt="Mail Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="pd-breadcrumb">
+      <a href="../index#projects" data-lang-fr="← Projets" data-lang-en="← Projects">← Projets</a>
+      <span class="pd-sep">/</span>
+      <a href="../index#projects" data-lang-fr="Écosystème Multijoueur" data-lang-en="Multiplayer Ecosystem">Écosystème Multijoueur</a>
+      <span class="pd-sep">/</span>
+      <span class="pd-current" data-lang-fr="LKZ Online Services" data-lang-en="LKZ Online Services">LKZ Online Services</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <div class="pd-hero-meta">
+        <span class="pd-hero-id">// project_lkz_online_services</span>
+        <div class="pd-hero-badges">
+          <span class="badge date-badge">2025</span>
+          <span class="badge wip-badge">WIP</span>
+        </div>
+      </div>
+      <span class="bundle-step" style="margin-bottom: 14px;">step_02 // services</span>
+      <h1 data-lang-fr="LKZ Online Services" data-lang-en="LKZ Online Services">LKZ Online Services</h1>
+      <p class="pd-hero-subtitle"
+         data-lang-fr="Backend Go TCP/SSL — pont entre le jeu et LKZ Network Engine. Gestion des sessions, matchmaking et état global."
+         data-lang-en="Go TCP/SSL backend — bridge between the game and LKZ Network Engine. Session management, matchmaking and global state.">Backend Go TCP/SSL — pont entre le jeu et LKZ Network Engine. Gestion des sessions, matchmaking et état global.</p>
+      <div class="pd-hero-tags project-tags">
+        <span class="tag">Go</span><span class="tag">TCP</span><span class="tag">SSL/TLS</span><span class="tag">Sessions</span><span class="tag">Matchmaking</span>
+      </div>
+    </div>
+
+    <!-- Screenshot -->
+    <div class="pd-media">
+      <img src="../assets/images/projects/lkznetwork2.png" alt="LKZ Online Services">
+    </div>
+
+    <!-- Content + Sidebar -->
+    <div class="pd-layout">
+      <div class="pd-content">
+        <div data-lang-content-fr><p>LKZ Online Services est mon premier projet Go — un projet d'apprentissage où j'ai exploré les API REST et HTTP avant de rencontrer des problèmes et de passer à <strong>TCP avec un certificat TLS</strong>. Le service agit à la fois comme serveur TCP (pour recevoir les connexions des clients de jeu) et comme client TCP (pour se connecter au serveur LKZ Network Engine), faisant le pont entre les deux.</p>
+<p>C'est un projet simple qui fait exactement ce dont j'avais besoin, et une excellente façon d'apprendre Go — un langage puissant et très utilisé dans le développement réseau et backend.</p>
+<h4>Fonctionnalités</h4>
+<ul>
+  <li>Gestion des Lobbies</li>
+  <li>Matchmaker</li>
+  <li>Gestion et Attribution des Sessions</li>
+  <li>Synchronisation de l'État Global</li>
+  <li>API de Communication</li>
+  <li>Protocole Custom</li>
+  <li>I/O Sécurisées</li>
+</ul></div>
+        <div data-lang-content-en style="display:none"><p>LKZ Online Services is my first Go project — a learn project where I explored REST and HTTP APIs before running into issues and switching to <strong>TCP with a TLS certificate</strong>. The service acts as both a TCP Server (receiving game client connections) and a TCP Client (connecting to the LKZ Network Engine server), bridging everything together.</p>
+<p>It's a simple project that does exactly what I needed, and a great way to learn Go — a powerful language widely used in network and backend development.</p>
+<h4>Features</h4>
+<ul>
+  <li>Lobby Management</li>
+  <li>Matchmaker</li>
+  <li>Session Management & Attribution</li>
+  <li>Global State Sync</li>
+  <li>Communication API</li>
+  <li>Custom Protocol</li>
+  <li>Secured I/O Handling</li>
+</ul></div>
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
+            <span class="pd-info-value">2025</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
+            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
+            <span class="pd-info-value" data-lang-fr="Développeur solo" data-lang-en="Solo developer">Développeur solo</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
+          <div class="pd-stack-list">
+            <span>Go</span><span>TCP</span><span>SSL/TLS</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Liens Externes" data-lang-en="// External Links">// Liens Externes</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label">GitHub</span>
+            <a class="pd-info-value pd-external-link" href="https://github.com/leikyz/lkz-online-services" target="_blank" rel="noopener">lkz-online-services ↗</a>
+          </div>
+        </div>
+
+        <div class="pd-chain">
+          <h5 data-lang-fr="// Parcours du Bundle" data-lang-en="// Bundle Journey">// Parcours du Bundle</h5>
+          <a class="pd-chain-item" href="lkz-network">
+            <div class="pd-chain-num">01</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Network Engine</div>
+              <span class="pd-chain-step">step_01 // engine</span>
+            </div>
+          </a>
+<div class="pd-chain-item current">
+            <div class="pd-chain-num">02</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Online Services</div>
+              <span class="pd-chain-step">step_02 // services</span>
+            </div>
+          </div>
+<a class="pd-chain-item" href="lkz-demo">
+            <div class="pd-chain-num">03</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Demo</div>
+              <span class="pd-chain-step">step_03 // demo</span>
+            </div>
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Prev/Next -->
+    <div class="pd-nav-footer">
+      <a class="pd-nav-btn pd-nav-back" href="lkz-network">
+          <span class="pd-nav-dir" data-lang-fr="← Projet précédent" data-lang-en="← Previous project">← Projet précédent</span>
+          <span class="pd-nav-title" data-lang-fr="LKZ Network" data-lang-en="LKZ Network">LKZ Network</span>
+        </a>
+      <a class="pd-nav-btn pd-nav-next" href="lkz-demo">
+          <span class="pd-nav-dir" data-lang-fr="Projet suivant →" data-lang-en="Next project →">Projet suivant →</span>
+          <span class="pd-nav-title" data-lang-fr="LKZ Demo" data-lang-en="LKZ Demo">LKZ Demo</span>
+        </a>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Retour en haut" data-lang-fr-title="Retour en haut" data-lang-en-title="Back to top">&#8679;</a>
+
+  <!-- Shared page logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Responsive menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
+      menuToggle.addEventListener('click', function () {
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
+      });
+      mainNav.addEventListener('click', (e) => {
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
+          mainNav.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Language switcher (matches index.html conventions)
+      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+      const cvLinks = document.querySelectorAll('.cv-link');
+      const langToggles = document.querySelectorAll('.lang-toggle');
+
+      const setLanguage = (lang) => {
+        const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+        translatableElements.forEach(el => {
+          if (el.dataset[key] !== undefined) {
+            el.innerHTML = el.dataset[key];
+          }
+          if (el.dataset[key + 'Title']) {
+            el.title = el.dataset[key + 'Title'];
+          }
+        });
+
+        // Language-specific body content blocks
+        document.querySelectorAll('[data-lang-content-fr]').forEach(el => {
+          el.style.display = lang === 'fr' ? '' : 'none';
+        });
+        document.querySelectorAll('[data-lang-content-en]').forEach(el => {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        // CV links (mirrors index.html exact code, including its existing quirks)
+        cvLinks.forEach(link => {
+          const cvPath = link.dataset['cv' + lang];
+          if (cvPath) link.href = cvPath;
+        });
+
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('language', lang); } catch(e) {}
+
+        langToggles.forEach(toggle => {
+          if (lang === 'fr') toggle.classList.add('lang-fr');
+          else toggle.classList.remove('lang-fr');
+        });
+      };
+
+      document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle')) {
+          const currentLang = localStorage.getItem('language') || 'en';
+          setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
+      });
+
+      const initialLang = (function() { try { return localStorage.getItem('language'); } catch(e) { return null; } })() || 'fr';
+      setLanguage(initialLang);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopButton.classList.add("visible");
+        else backToTopButton.classList.remove("visible");
+      });
+    });
+  </script>
+  <script src="../assets/js/media-gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DungeonScape — Mateo Scarpetta</title>
+  <meta name="description" content="Jeu de cartes et d'exploration de donjon en 2D, développé en C++ avec SFML.">
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="project-page">
+  <header>
+    <div class="container">
+      <a href="../index#about" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MS<span class="logo-slash"> /</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="../index#about"><span class="nav-num">01.</span><span data-lang-fr="À propos" data-lang-en="About">À propos</span></a>
+        <a href="../index#projects"><span class="nav-num">02.</span><span data-lang-fr="Projets" data-lang-en="Projects">Projets</span></a>
+        <a href="../index#skills"><span class="nav-num">03.</span><span data-lang-fr="Compétences" data-lang-en="Skills">Compétences</span></a>
+        <a href="../index#experience"><span class="nav-num">04.</span><span data-lang-fr="Parcours" data-lang-en="Experience">Parcours</span></a>
+        <a href="../index#contact"><span class="nav-num">05.</span><span data-lang-fr="Contact" data-lang-en="Contact">Contact</span></a>
+        <div class="mobile-only-container"></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-toggle" aria-label="Switch language" role="button">
+          <span class="lang-option">FR</span>
+          <span class="lang-option">EN</span>
+          <span class="lang-slider"></span>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/leikyz" target="_blank" title="GitHub">
+            <img src="../assets/images/icon/github.png" alt="GitHub Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
+            <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
+          </a>
+          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+            <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
+          </a>
+          <a href="mailto:leikyz17@outlook.com" title="Email">
+            <img src="../assets/images/icon/email.png" alt="Mail Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="pd-breadcrumb">
+      <a href="../index#projects" data-lang-fr="← Projets" data-lang-en="← Projects">← Projets</a>
+      <span class="pd-sep">/</span>
+      <span class="pd-current" data-lang-fr="DungeonScape" data-lang-en="DungeonScape">DungeonScape</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <div class="pd-hero-meta">
+        <span class="pd-hero-id">// project_dungeonscape</span>
+        <div class="pd-hero-badges">
+          <span class="badge date-badge">2024</span>
+          <span class="badge duration-badge" data-lang-fr="8 semaines" data-lang-en="8 weeks">8 semaines</span>
+        </div>
+      </div>
+      
+      <h1 data-lang-fr="DungeonScape" data-lang-en="DungeonScape">DungeonScape</h1>
+      <p class="pd-hero-subtitle"
+         data-lang-fr="Jeu de cartes et d'exploration de donjon en 2D, développé en C++ avec SFML."
+         data-lang-en="2D dungeon-crawling card game developed in C++ with the SFML library.">Jeu de cartes et d'exploration de donjon en 2D, développé en C++ avec SFML.</p>
+      <div class="pd-hero-tags project-tags">
+        <span class="tag">C++</span><span class="tag">SFML</span>
+      </div>
+    </div>
+
+    <!-- Media -->
+<div class="media-gallery" data-count="1">
+      <button class="media-gallery-prev" aria-label="Previous">‹</button>
+      <button class="media-gallery-next" aria-label="Next">›</button>
+
+<div class="media-gallery-viewport">
+        <div class="media-gallery-slot active" data-index="0">
+          <span class="media-gallery-slot-label">DungeonScape — Gameplay</span>
+          <video src="../assets/videos/dungeonscape.mp4" controls muted loop playsinline poster="../assets/images/projects/dungeonscape.png"></video>
+        </div>
+      </div>
+
+<div class="media-gallery-strip">
+        <div class="media-gallery-strip-inner">
+          <button class="media-gallery-tab active" data-index="0">
+            <div class="media-gallery-tab-thumb"><img src="../assets/images/projects/dungeonscape.png" alt="DungeonScape — Gameplay"></div>
+            <span class="media-gallery-tab-num">01</span>
+            <span class="media-gallery-tab-name">DungeonScape — Gameplay</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content + Sidebar -->
+    <div class="pd-layout">
+      <div class="pd-content">
+        <div data-lang-content-fr><p>Dungeonscape est un jeu de cartes et d'exploration de donjon en 2D, développé en C++ avec la bibliothèque SFML. Dans ce jeu au tour par tour, les joueurs choisissent parmi quatre héros, chacun avec des capacités uniques, pour s'aventurer dans un donjon.</p>
+<h4>Ma Contribution</h4>
+<ul>
+  <li><strong>Gestion des Cartes :</strong> Implémentation de la logique pour piocher, jouer et défausser les cartes.</li>
+  <li><strong>Gestion du Deck :</strong> Développement du système permettant aux joueurs de construire et gérer leur deck.</li>
+  <li><strong>Interface Utilisateur (UI) :</strong> Création des éléments d'interface en jeu, comme la main du joueur, les points de vie et le chronomètre.</li>
+</ul></div>
+        <div data-lang-content-en style="display:none"><p>Dungeonscape is a 2D dungeon-crawling card game developed in C++ with the SFML library. In this turn-based game, players choose from four distinct heroes, each with unique abilities, to venture into a dungeon.</p>
+<h4>My Contribution</h4>
+<ul>
+  <li><strong>Card Management:</strong> Implemented the logic for drawing, playing, and discarding cards.</li>
+  <li><strong>Deck Management:</strong> Developed the system allowing players to build and manage their deck.</li>
+  <li><strong>In-Game UI:</strong> Created the in-game interface elements, such as the player's hand, health points, and the timer.</li>
+</ul></div>
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
+            <span class="pd-info-value">2024</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
+            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
+            <span class="pd-info-value" data-lang-fr="Développeur solo" data-lang-en="Solo developer">Développeur solo</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
+          <div class="pd-stack-list">
+            <span>C++</span><span>SFML</span>
+          </div>
+        </div>
+        
+      </aside>
+    </div>
+
+    <!-- Prev/Next -->
+    <div class="pd-nav-footer">
+      <a class="pd-nav-btn pd-nav-back" href="iron-diver">
+          <span class="pd-nav-dir" data-lang-fr="← Projet précédent" data-lang-en="← Previous project">← Projet précédent</span>
+          <span class="pd-nav-title" data-lang-fr="Iron Diver" data-lang-en="Iron Diver">Iron Diver</span>
+        </a>
+      <a class="pd-nav-btn pd-nav-next" href="game-launcher">
+          <span class="pd-nav-dir" data-lang-fr="Projet suivant →" data-lang-en="Next project →">Projet suivant →</span>
+          <span class="pd-nav-title" data-lang-fr="Game Launcher" data-lang-en="Game Launcher">Game Launcher</span>
+        </a>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Retour en haut" data-lang-fr-title="Retour en haut" data-lang-en-title="Back to top">&#8679;</a>
+
+  <!-- Shared page logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Responsive menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
+      menuToggle.addEventListener('click', function () {
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
+      });
+      mainNav.addEventListener('click', (e) => {
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
+          mainNav.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Language switcher (matches index.html conventions)
+      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+      const cvLinks = document.querySelectorAll('.cv-link');
+      const langToggles = document.querySelectorAll('.lang-toggle');
+
+      const setLanguage = (lang) => {
+        const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+        translatableElements.forEach(el => {
+          if (el.dataset[key] !== undefined) {
+            el.innerHTML = el.dataset[key];
+          }
+          if (el.dataset[key + 'Title']) {
+            el.title = el.dataset[key + 'Title'];
+          }
+        });
+
+        // Language-specific body content blocks
+        document.querySelectorAll('[data-lang-content-fr]').forEach(el => {
+          el.style.display = lang === 'fr' ? '' : 'none';
+        });
+        document.querySelectorAll('[data-lang-content-en]').forEach(el => {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        // CV links (mirrors index.html exact code, including its existing quirks)
+        cvLinks.forEach(link => {
+          const cvPath = link.dataset['cv' + lang];
+          if (cvPath) link.href = cvPath;
+        });
+
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('language', lang); } catch(e) {}
+
+        langToggles.forEach(toggle => {
+          if (lang === 'fr') toggle.classList.add('lang-fr');
+          else toggle.classList.remove('lang-fr');
+        });
+      };
+
+      document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle')) {
+          const currentLang = localStorage.getItem('language') || 'en';
+          setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
+      });
+
+      const initialLang = (function() { try { return localStorage.getItem('language'); } catch(e) { return null; } })() || 'fr';
+      setLanguage(initialLang);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopButton.classList.add("visible");
+        else backToTopButton.classList.remove("visible");
+      });
+    });
+  </script>
+  <script src="../assets/js/media-gallery.js"></script>
+</body>
+</html>

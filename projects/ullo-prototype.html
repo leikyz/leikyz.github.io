@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype de Jeu - Stage — Mateo Scarpetta</title>
+  <meta name="description" content="Prototype développé lors d'un stage chez Ullo — jeu exploitant le neurofeedback en VR.">
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="project-page">
+  <header>
+    <div class="container">
+      <a href="../index#about" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MS<span class="logo-slash"> /</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="../index#about"><span class="nav-num">01.</span><span data-lang-fr="À propos" data-lang-en="About">À propos</span></a>
+        <a href="../index#projects"><span class="nav-num">02.</span><span data-lang-fr="Projets" data-lang-en="Projects">Projets</span></a>
+        <a href="../index#skills"><span class="nav-num">03.</span><span data-lang-fr="Compétences" data-lang-en="Skills">Compétences</span></a>
+        <a href="../index#experience"><span class="nav-num">04.</span><span data-lang-fr="Parcours" data-lang-en="Experience">Parcours</span></a>
+        <a href="../index#contact"><span class="nav-num">05.</span><span data-lang-fr="Contact" data-lang-en="Contact">Contact</span></a>
+        <div class="mobile-only-container"></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-toggle" aria-label="Switch language" role="button">
+          <span class="lang-option">FR</span>
+          <span class="lang-option">EN</span>
+          <span class="lang-slider"></span>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/leikyz" target="_blank" title="GitHub">
+            <img src="../assets/images/icon/github.png" alt="GitHub Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
+            <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
+          </a>
+          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+            <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
+          </a>
+          <a href="mailto:leikyz17@outlook.com" title="Email">
+            <img src="../assets/images/icon/email.png" alt="Mail Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="pd-breadcrumb">
+      <a href="../index#projects" data-lang-fr="← Projets" data-lang-en="← Projects">← Projets</a>
+      <span class="pd-sep">/</span>
+      <span class="pd-current" data-lang-fr="Prototype de Jeu - Stage" data-lang-en="Game Prototype - Intern">Prototype de Jeu - Stage</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <div class="pd-hero-meta">
+        <span class="pd-hero-id">// project_ullo_prototype</span>
+        <div class="pd-hero-badges">
+          <span class="badge date-badge">2021</span>
+        </div>
+      </div>
+      
+      <h1 data-lang-fr="Prototype de Jeu - Stage" data-lang-en="Game Prototype - Intern">Prototype de Jeu - Stage</h1>
+      <p class="pd-hero-subtitle"
+         data-lang-fr="Prototype développé lors d'un stage chez Ullo — jeu exploitant le neurofeedback en VR."
+         data-lang-en="Prototype developed during internship at Ullo — neurofeedback-based VR game.">Prototype développé lors d'un stage chez Ullo — jeu exploitant le neurofeedback en VR.</p>
+      <div class="pd-hero-tags project-tags">
+        <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">VR</span>
+      </div>
+    </div>
+
+    <!-- Media -->
+        <!-- Media gallery — add more slots + tabs below to showcase additional videos -->
+    <div class="media-gallery" data-count="1">
+      <button class="media-gallery-prev" aria-label="Previous">‹</button>
+      <button class="media-gallery-next" aria-label="Next">›</button>
+
+<div class="media-gallery-viewport">
+        <div class="media-gallery-slot active" data-index="0">
+          <span class="media-gallery-slot-label">VR Prototype — Demo</span>
+          <img src="../assets/images/projects/proto.png" alt="VR Prototype — Demo">
+        </div>
+      </div>
+
+<div class="media-gallery-strip">
+        <div class="media-gallery-strip-inner">
+          <button class="media-gallery-tab active" data-index="0">
+            <div class="media-gallery-tab-thumb"><img src="../assets/images/projects/proto.png" alt="VR Prototype — Demo"></div>
+            <span class="media-gallery-tab-num">01</span>
+            <span class="media-gallery-tab-name">VR Prototype — Demo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content + Sidebar -->
+    <div class="pd-layout">
+      <div class="pd-content">
+        <div data-lang-content-fr><p>Ce projet a été réalisé sur Unity durant mon stage de 5 semaines au sein de l'entreprise Ullo. C'est un jeu exploitant le neurofeedback (modulation de l'activité cérébrale) en combinant un Oculus Quest, un bandeau Muse pour l'activité cérébrale, et une montre connectée pour le rythme respiratoire.</p>
+<h4>Fonctionnalités Implémentées</h4>
+<ul>
+  <li><strong>Gameplay basé sur le Neurofeedback :</strong> La capacité de voler est directement liée aux fréquences cérébrales du joueur.</li>
+  <li><strong>Création d'Environnement :</strong> Mise en place du monde de jeu avec terrain, ciel personnalisable et plateformes.</li>
+  <li><strong>Interaction Dynamique :</strong> Les objets du jeu changent de position et de forme en fonction des données de neurofeedback.</li>
+  <li><strong>Système de Collectibles :</strong> Intégration de pièces à récupérer avec un compteur de score.</li>
+  <li><strong>Interface Utilisateur :</strong> Création d'une UI permettant de configurer différents paramètres du jeu.</li>
+</ul></div>
+        <div data-lang-content-en style="display:none"><p>This project was developed in Unity during my 5-week internship at Ullo. It uses neurofeedback (brain activity modulation) combining an Oculus Quest, a Muse headband, and a smartwatch.</p>
+<h4>Implemented Features</h4>
+<ul>
+  <li><strong>Neurofeedback-Based Gameplay:</strong> The ability to fly is directly linked to the player's brain frequencies.</li>
+  <li><strong>Environment Creation:</strong> Game world with terrain, customizable sky, and platforms.</li>
+  <li><strong>Dynamic Interaction:</strong> Game objects change position and shape based on neurofeedback data.</li>
+  <li><strong>Collectible System:</strong> Coins with a score counter.</li>
+  <li><strong>User Interface:</strong> UI to configure various game settings.</li>
+</ul></div>
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
+            <span class="pd-info-value">2021</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
+            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
+            <span class="pd-info-value" data-lang-fr="Stagiaire Unity" data-lang-en="Unity intern">Stagiaire Unity</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
+          <div class="pd-stack-list">
+            <span>C#</span><span>Unity</span><span>VR</span><span>Muse</span>
+          </div>
+        </div>
+        
+      </aside>
+    </div>
+
+    <!-- Prev/Next -->
+    <div class="pd-nav-footer">
+      <a class="pd-nav-btn pd-nav-back" href="game-launcher">
+          <span class="pd-nav-dir" data-lang-fr="← Projet précédent" data-lang-en="← Previous project">← Projet précédent</span>
+          <span class="pd-nav-title" data-lang-fr="Game Launcher" data-lang-en="Game Launcher">Game Launcher</span>
+        </a>
+      <span></span>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Retour en haut" data-lang-fr-title="Retour en haut" data-lang-en-title="Back to top">&#8679;</a>
+
+  <!-- Shared page logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Responsive menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
+      menuToggle.addEventListener('click', function () {
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
+      });
+      mainNav.addEventListener('click', (e) => {
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
+          mainNav.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Language switcher (matches index.html conventions)
+      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+      const cvLinks = document.querySelectorAll('.cv-link');
+      const langToggles = document.querySelectorAll('.lang-toggle');
+
+      const setLanguage = (lang) => {
+        const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+        translatableElements.forEach(el => {
+          if (el.dataset[key] !== undefined) {
+            el.innerHTML = el.dataset[key];
+          }
+          if (el.dataset[key + 'Title']) {
+            el.title = el.dataset[key + 'Title'];
+          }
+        });
+
+        // Language-specific body content blocks
+        document.querySelectorAll('[data-lang-content-fr]').forEach(el => {
+          el.style.display = lang === 'fr' ? '' : 'none';
+        });
+        document.querySelectorAll('[data-lang-content-en]').forEach(el => {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        // CV links (mirrors index.html exact code, including its existing quirks)
+        cvLinks.forEach(link => {
+          const cvPath = link.dataset['cv' + lang];
+          if (cvPath) link.href = cvPath;
+        });
+
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('language', lang); } catch(e) {}
+
+        langToggles.forEach(toggle => {
+          if (lang === 'fr') toggle.classList.add('lang-fr');
+          else toggle.classList.remove('lang-fr');
+        });
+      };
+
+      document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle')) {
+          const currentLang = localStorage.getItem('language') || 'en';
+          setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
+      });
+
+      const initialLang = (function() { try { return localStorage.getItem('language'); } catch(e) { return null; } })() || 'fr';
+      setLanguage(initialLang);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopButton.classList.add("visible");
+        else backToTopButton.classList.remove("visible");
+      });
+    });
+  </script>
+  <script src="../assets/js/media-gallery.js"></script>
+</body>
+</html>

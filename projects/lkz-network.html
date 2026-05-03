@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LKZ Network Engine — Mateo Scarpetta</title>
+  <meta name="description" content="Moteur réseau C++ haute performance — synchronisation d'entités en temps réel, IOCP, ECS et navigation Recast.">
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="project-page">
+  <header>
+    <div class="container">
+      <a href="../index#about" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MS<span class="logo-slash"> /</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="../index#about"><span class="nav-num">01.</span><span data-lang-fr="À propos" data-lang-en="About">À propos</span></a>
+        <a href="../index#projects"><span class="nav-num">02.</span><span data-lang-fr="Projets" data-lang-en="Projects">Projets</span></a>
+        <a href="../index#skills"><span class="nav-num">03.</span><span data-lang-fr="Compétences" data-lang-en="Skills">Compétences</span></a>
+        <a href="../index#experience"><span class="nav-num">04.</span><span data-lang-fr="Parcours" data-lang-en="Experience">Parcours</span></a>
+        <a href="../index#contact"><span class="nav-num">05.</span><span data-lang-fr="Contact" data-lang-en="Contact">Contact</span></a>
+        <div class="mobile-only-container"></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-toggle" aria-label="Switch language" role="button">
+          <span class="lang-option">FR</span>
+          <span class="lang-option">EN</span>
+          <span class="lang-slider"></span>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/leikyz" target="_blank" title="GitHub">
+            <img src="../assets/images/icon/github.png" alt="GitHub Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
+            <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
+          </a>
+          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+            <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
+          </a>
+          <a href="mailto:leikyz17@outlook.com" title="Email">
+            <img src="../assets/images/icon/email.png" alt="Mail Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="pd-breadcrumb">
+      <a href="../index#projects" data-lang-fr="← Projets" data-lang-en="← Projects">← Projets</a>
+      <span class="pd-sep">/</span>
+      <a href="../index#projects" data-lang-fr="Écosystème Multijoueur" data-lang-en="Multiplayer Ecosystem">Écosystème Multijoueur</a>
+      <span class="pd-sep">/</span>
+      <span class="pd-current" data-lang-fr="LKZ Network Engine" data-lang-en="LKZ Network Engine">LKZ Network Engine</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <div class="pd-hero-meta">
+        <span class="pd-hero-id">// project_lkz_network_engine</span>
+        <div class="pd-hero-badges">
+          <span class="badge date-badge">2025</span>
+          <span class="badge wip-badge">WIP</span>
+        </div>
+      </div>
+      <span class="bundle-step" style="margin-bottom: 14px;">step_01 // engine</span>
+      <h1 data-lang-fr="LKZ Network Engine" data-lang-en="LKZ Network Engine">LKZ Network Engine</h1>
+      <p class="pd-hero-subtitle"
+         data-lang-fr="Moteur réseau C++ multithread — construit pour synchroniser le maximum d'entités en temps réel avec un overhead minimal."
+         data-lang-en="Multithreaded C++ network engine — built to sync as many entities as possible in real time with minimal overhead.">Moteur réseau C++ multithread — construit pour synchroniser le maximum d'entités en temps réel avec un overhead minimal.</p>
+      <div class="pd-hero-tags project-tags">
+        <span class="tag">C++</span><span class="tag">IOCP</span><span class="tag">Multithreaded</span><span class="tag">UDP/TCP</span><span class="tag">ECS</span><span class="tag">Recast Nav</span><span class="tag">Authoritative Server</span>
+      </div>
+    </div>
+
+    <!-- Screenshot -->
+    <div class="pd-media">
+      <img src="../assets/images/projects/lkznetwork2.png" alt="LKZ Network Engine">
+    </div>
+
+    <!-- Content + Sidebar -->
+    <div class="pd-layout">
+      <div class="pd-content">
+        <div data-lang-content-fr><p>J'ai commencé à apprendre la programmation réseau en octobre 2024 avec un premier moteur réseau C# basé sur TCP, qui m'a permis de synchroniser deux joueurs dans Unity. Ce prototype est disponible sur GitHub si vous voulez voir le point de départ. J'ai ensuite adapté le moteur pour utiliser UDP, afin de comprendre les défis de la fiabilité, de la perte de paquets et de la synchronisation temps réel.</p>
+<p>En février 2025, j'ai tout reconstruit en C++ depuis zéro. L'objectif spécifique de ce moteur : <strong>synchroniser le maximum d'entités en temps réel avec un overhead minimal</strong>.</p>
+<p>Une intégration clé est <strong>Recast Navigation</strong> — une librairie de pathfinding open source utilisée dans toute l'industrie. J'exporte les données de navmesh depuis Unity en fichiers texte, les reconstruit côté serveur avec Recast, puis configure les agents pour que le serveur gère toutes les simulations : joueurs et entités IA. Zéro pathfinding côté client — l'autorité est entièrement serveur.</p>
+<h4>Fonctionnalités Actuelles</h4>
+<ul>
+  <li>Event-Driven Networking</li>
+  <li>I/O Asynchrones (IOCP)</li>
+  <li>Multithread</li>
+  <li>Sérialisation Big Endian</li>
+  <li>Protocole custom efficace</li>
+  <li>Bitpacking partiel</li>
+  <li>Tracker de métriques complet — affiché dans le client via LKZ Demo</li>
+  <li>Serveur Autoritaire Complet</li>
+  <li>Intégration ECS pour les entités</li>
+  <li>Navigation, Pathfinding et Navmesh avec Recast Navigation</li>
+  <li>Architecture par session — s'appuie sur LKZ Online Services pour les sessions et le matchmaking</li>
+  <li>Architecture légère</li>
+  <li>UDP pour la simulation, TCP pour la fiabilité</li>
+  <li>Batching optimisé</li>
+  <li>Pipeline I/O Zero-Allocation</li>
+</ul>
+<h4>Objectifs Futurs</h4>
+<ul>
+  <li>Paquets chiffrés pour une transmission de données sécurisée</li>
+  <li>Fragmentation et réassemblage des paquets pour supporter de grandes charges de données</li>
+  <li>Authentification cryptographiquement sécurisée via des jetons de connexion</li>
+</ul>
+<p class="pd-demo-note">Ce projet tourne comme un serveur console — toutes les métriques et démos sont dans <a href="lkz-demo">LKZ Demo →</a></p></div>
+        <div data-lang-content-en style="display:none"><p>I started learning network programming in October 2024 with a C# TCP engine that let me sync two players in Unity. That first prototype is available on GitHub if you want to see where it started. I then adapted it to UDP to understand packet loss, reliability, and real-time sync challenges.</p>
+<p>In February 2025 I rebuilt everything from scratch in C++. The engine has one specific goal: <strong>sync as many entities as possible in real time with minimal overhead</strong>.</p>
+<p>A key integration is <strong>Recast Navigation</strong> — an open-source pathfinding library used across the game industry. I export navmesh data from Unity as text files, rebuild the full navigation mesh server-side with Recast, then create and configure agents so the server handles every simulation: both players and AI entities. No client-side pathfinding — fully authoritative server.</p>
+<h4>Current Features</h4>
+<ul>
+  <li>Event-Driven Networking</li>
+  <li>Asynchronous I/O (IOCP)</li>
+  <li>Multithreaded</li>
+  <li>Big Endian Serialization</li>
+  <li>Custom efficient protocol</li>
+  <li>Partial Bitpacking</li>
+  <li>Full metrics tracker for monitoring — displayed in the client via LKZ Demo</li>
+  <li>Full Authoritative Server</li>
+  <li>ECS Integration for entities</li>
+  <li>Navigation, Pathfinding & Navmesh with Recast Navigation</li>
+  <li>Session-based architecture — relies on LKZ Online Services for sessions and matchmaking</li>
+  <li>Lightweight architecture</li>
+  <li>UDP for simulation, TCP for reliability</li>
+  <li>Optimized Batching</li>
+  <li>Zero-Allocation I/O Pipeline</li>
+</ul>
+<h4>Future Goals</h4>
+<ul>
+  <li>Encrypted Packets for secure data transmission</li>
+  <li>Packet Fragmentation and Reassembly to support large data payloads</li>
+  <li>Cryptographically Secure Authentication using connection tokens</li>
+</ul>
+<p class="pd-demo-note">This project runs as a console server — all metrics and demos are showcased in <a href="lkz-demo">LKZ Demo →</a></p></div>
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
+            <span class="pd-info-value">2025</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
+            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
+            <span class="pd-info-value" data-lang-fr="Développeur solo" data-lang-en="Solo developer">Développeur solo</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
+          <div class="pd-stack-list">
+            <span>C++</span><span>IOCP</span><span>UDP/TCP</span><span>Multithreaded</span><span>ECS</span><span>Recast Nav</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Liens Externes" data-lang-en="// External Links">// Liens Externes</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label">GitHub</span>
+            <a class="pd-info-value pd-external-link" href="https://github.com/leikyz/lkz-network-engine" target="_blank" rel="noopener">lkz-network-engine ↗</a>
+          </div>
+        </div>
+
+        <div class="pd-chain">
+          <h5 data-lang-fr="// Parcours du Bundle" data-lang-en="// Bundle Journey">// Parcours du Bundle</h5>
+          <div class="pd-chain-item current">
+            <div class="pd-chain-num">01</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Network Engine</div>
+              <span class="pd-chain-step">step_01 // engine</span>
+            </div>
+          </div>
+<a class="pd-chain-item" href="lkz-online-services">
+            <div class="pd-chain-num">02</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Online Services</div>
+              <span class="pd-chain-step">step_02 // services</span>
+            </div>
+          </a>
+<a class="pd-chain-item" href="lkz-demo">
+            <div class="pd-chain-num">03</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Demo</div>
+              <span class="pd-chain-step">step_03 // demo</span>
+            </div>
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Prev/Next -->
+    <div class="pd-nav-footer">
+      <span></span>
+      <a class="pd-nav-btn pd-nav-next" href="lkz-online-services">
+          <span class="pd-nav-dir" data-lang-fr="Projet suivant →" data-lang-en="Next project →">Projet suivant →</span>
+          <span class="pd-nav-title" data-lang-fr="LKZ Online Services" data-lang-en="LKZ Online Services">LKZ Online Services</span>
+        </a>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Retour en haut" data-lang-fr-title="Retour en haut" data-lang-en-title="Back to top">&#8679;</a>
+
+  <!-- Shared page logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Responsive menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
+      menuToggle.addEventListener('click', function () {
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
+      });
+      mainNav.addEventListener('click', (e) => {
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
+          mainNav.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Language switcher (matches index.html conventions)
+      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+      const cvLinks = document.querySelectorAll('.cv-link');
+      const langToggles = document.querySelectorAll('.lang-toggle');
+
+      const setLanguage = (lang) => {
+        const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+        translatableElements.forEach(el => {
+          if (el.dataset[key] !== undefined) {
+            el.innerHTML = el.dataset[key];
+          }
+          if (el.dataset[key + 'Title']) {
+            el.title = el.dataset[key + 'Title'];
+          }
+        });
+
+        // Language-specific body content blocks
+        document.querySelectorAll('[data-lang-content-fr]').forEach(el => {
+          el.style.display = lang === 'fr' ? '' : 'none';
+        });
+        document.querySelectorAll('[data-lang-content-en]').forEach(el => {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        // CV links (mirrors index.html exact code, including its existing quirks)
+        cvLinks.forEach(link => {
+          const cvPath = link.dataset['cv' + lang];
+          if (cvPath) link.href = cvPath;
+        });
+
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('language', lang); } catch(e) {}
+
+        langToggles.forEach(toggle => {
+          if (lang === 'fr') toggle.classList.add('lang-fr');
+          else toggle.classList.remove('lang-fr');
+        });
+      };
+
+      document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle')) {
+          const currentLang = localStorage.getItem('language') || 'en';
+          setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
+      });
+
+      const initialLang = (function() { try { return localStorage.getItem('language'); } catch(e) { return null; } })() || 'fr';
+      setLanguage(initialLang);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopButton.classList.add("visible");
+        else backToTopButton.classList.remove("visible");
+      });
+    });
+  </script>
+  <script src="../assets/js/media-gallery.js"></script>
+</body>
+</html>

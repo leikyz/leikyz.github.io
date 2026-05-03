@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LKZ Demo — Mateo Scarpetta</title>
+  <meta name="description" content="Sandbox Unity TPS — demo map with full developer console displaying real-time LKZ Network Engine metrics. All videos recorded with client in France, server in Frankfurt.">
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body class="project-page">
+  <header>
+    <div class="container">
+      <a href="../index#about" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MS<span class="logo-slash"> /</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="../index#about"><span class="nav-num">01.</span><span data-lang-fr="À propos" data-lang-en="About">À propos</span></a>
+        <a href="../index#projects"><span class="nav-num">02.</span><span data-lang-fr="Projets" data-lang-en="Projects">Projets</span></a>
+        <a href="../index#skills"><span class="nav-num">03.</span><span data-lang-fr="Compétences" data-lang-en="Skills">Compétences</span></a>
+        <a href="../index#experience"><span class="nav-num">04.</span><span data-lang-fr="Parcours" data-lang-en="Experience">Parcours</span></a>
+        <a href="../index#contact"><span class="nav-num">05.</span><span data-lang-fr="Contact" data-lang-en="Contact">Contact</span></a>
+        <div class="mobile-only-container"></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-toggle" aria-label="Switch language" role="button">
+          <span class="lang-option">FR</span>
+          <span class="lang-option">EN</span>
+          <span class="lang-slider"></span>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/leikyz" target="_blank" title="GitHub">
+            <img src="../assets/images/icon/github.png" alt="GitHub Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
+            <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
+          </a>
+          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+            <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
+          </a>
+          <a href="mailto:leikyz17@outlook.com" title="Email">
+            <img src="../assets/images/icon/email.png" alt="Mail Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="pd-breadcrumb">
+      <a href="../index#projects" data-lang-fr="← Projets" data-lang-en="← Projects">← Projets</a>
+      <span class="pd-sep">/</span>
+      <a href="../index#projects" data-lang-fr="Écosystème Multijoueur" data-lang-en="Multiplayer Ecosystem">Écosystème Multijoueur</a>
+      <span class="pd-sep">/</span>
+      <span class="pd-current" data-lang-fr="LKZ Demo" data-lang-en="LKZ Demo">LKZ Demo</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <div class="pd-hero-meta">
+        <span class="pd-hero-id">// project_lkz_demo</span>
+        <div class="pd-hero-badges">
+          <span class="badge date-badge">2025</span>
+          <span class="badge wip-badge">WIP</span>
+        </div>
+      </div>
+      <span class="bundle-step" style="margin-bottom: 14px;">step_03 // demo</span>
+      <h1 data-lang-fr="LKZ Demo" data-lang-en="LKZ Demo">LKZ Demo</h1>
+      <p class="pd-hero-subtitle"
+         data-lang-fr="Sandbox TPS Unity — carte playground avec console complète affichant les métriques du moteur réseau en temps réel. Client en France, serveur à Francfort."
+         data-lang-en="Unity TPS sandbox — playground map with full developer console displaying real-time network engine metrics. Client in France, server in Frankfurt.">Sandbox TPS Unity — carte playground avec console complète affichant les métriques du moteur réseau en temps réel. Client en France, serveur à Francfort.</p>
+      <div class="pd-hero-tags project-tags">
+        <span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Networking</span><span class="tag">TPS</span><span class="tag">Prediction</span><span class="tag">Interpolation</span><span class="tag">Procedural Animation</span>
+      </div>
+    </div>
+
+    <!-- Screenshot -->
+    <div class="pd-media">
+      <img src="../assets/images/projects/lkz-demo.png" alt="LKZ Demo">
+    </div>
+
+    <!-- Content + Sidebar -->
+    <div class="pd-layout">
+      <div class="pd-content">
+        <div data-lang-content-fr><p>LKZ Demo est l'application Unity qui relie tout l'écosystème LKZ. C'est une démo réseau complète — une carte sandbox et playground pour le moteur réseau, avec une console développeur affichant les métriques serveur en temps réel.</p>
+<p>La demo n'essaie pas d'être un jeu. C'est une <strong>vitrine technique</strong>. Chaque vidéo est enregistrée avec le client en France et le serveur à Francfort (Allemagne), offrant des conditions de latence réelles pour tous les tests réseau.</p>
+<h4>Fonctionnalités Actuelles</h4>
+<ul>
+  <li>Contrôleur caméra TPS complet avec Cinemachine</li>
+  <li>Système d'armes synchronisé complet (création, données, actions)</li>
+  <li>Mouvement TPS synchronisé complet — prédiction, interpolation et réconciliation</li>
+  <li>Synchronisation de nombreuses fonctionnalités gameplay</li>
+  <li>Menu / Lobby / Matchmaking complets</li>
+  <li>Entités IA entièrement synchronisées et pilotées par le serveur</li>
+  <li>Burst, Native Array et Jobs pour le mouvement efficace des entités</li>
+  <li>Architecture Client / Serveur</li>
+  <li>TCP SSL via LKZ Online Services</li>
+  <li>TCP et UDP via LKZ Network Engine</li>
+  <li>Protocole C# custom</li>
+  <li>Sérialisation Big Endian custom</li>
+  <li>Console complète — métriques réseau, serveur et client</li>
+  <li>Animation procédurale synchronisée</li>
+</ul></div>
+        <div data-lang-content-en style="display:none"><p>LKZ Demo is the Unity application that ties the entire LKZ ecosystem together. It's a complete network demo — a sandbox and playground for the network engine, with a full developer console displaying real-time server metrics.</p>
+<p>The demo doesn't try to be a game. It's a <strong>technical showcase</strong>. Every video is recorded with the client in France and the server in Frankfurt, Germany, giving real-world latency conditions for all network tests.</p>
+<h4>Current Features</h4>
+<ul>
+  <li>Complete TPS camera controller using Cinemachine</li>
+  <li>Complete Synced Weapon System (creation, data, actions)</li>
+  <li>Complete Synced TPS Character Movement — prediction, interpolation and reconciliation</li>
+  <li>Sync of various gameplay features</li>
+  <li>Complete Menu / Lobby / Matchmaking</li>
+  <li>AI Entities fully synchronized and server-driven</li>
+  <li>Burst, Native Array and Jobs for efficient entity movement</li>
+  <li>Client / Server Architecture</li>
+  <li>TCP SSL via LKZ Online Services</li>
+  <li>TCP and UDP via LKZ Network Engine</li>
+  <li>Custom C# Protocol</li>
+  <li>Custom Big Endian Serialization</li>
+  <li>Complete console — network, server and client metrics</li>
+  <li>Synced Procedural Animation</li>
+</ul></div>
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
+            <span class="pd-info-value">2025</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
+            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
+            <span class="pd-info-value" data-lang-fr="Développeur solo" data-lang-en="Solo developer">Développeur solo</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Client" data-lang-en="Client">Client</span>
+            <span class="pd-info-value" data-lang-fr="France" data-lang-en="France">France</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Serveur" data-lang-en="Server">Serveur</span>
+            <span class="pd-info-value" data-lang-fr="Frankfurt, DE" data-lang-en="Frankfurt, DE">Frankfurt, DE</span>
+          </div>
+        </div>
+
+        <div class="pd-info-card">
+          <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
+          <div class="pd-stack-list">
+            <span>C#</span><span>Unity</span><span>Cinemachine</span><span>Burst</span><span>TCP/UDP</span>
+          </div>
+        </div>
+
+        <div class="pd-chain">
+          <h5 data-lang-fr="// Parcours du Bundle" data-lang-en="// Bundle Journey">// Parcours du Bundle</h5>
+          <a class="pd-chain-item" href="lkz-network">
+            <div class="pd-chain-num">01</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Network Engine</div>
+              <span class="pd-chain-step">step_01 // engine</span>
+            </div>
+          </a>
+          <a class="pd-chain-item" href="lkz-online-services">
+            <div class="pd-chain-num">02</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Online Services</div>
+              <span class="pd-chain-step">step_02 // services</span>
+            </div>
+          </a>
+          <div class="pd-chain-item current">
+            <div class="pd-chain-num">03</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">LKZ Demo</div>
+              <span class="pd-chain-step">step_03 // demo</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Video Gallery -->
+    <div class="pd-video-gallery">
+      <div class="pd-video-gallery-header">
+        <h4 class="pd-video-gallery-title" data-lang-fr="// Galerie Vidéo" data-lang-en="// Video Gallery">// Video Gallery</h4>
+        <span class="pd-video-gallery-count" data-lang-fr="4 vidéos" data-lang-en="4 videos">4 videos</span>
+      </div>
+      <p class="pd-video-gallery-intro" data-lang-fr="Toutes les vidéos sont enregistrées avec le client en France et le serveur à Francfort — conditions de latence réelles." data-lang-en="All videos recorded with the client in France and the server in Frankfurt — real-world latency conditions.">All videos recorded with the client in France and the server in Frankfurt — real-world latency conditions.</p>
+      <div class="pd-video-grid">
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <video src="../assets/videos/lkz/PREDICTION DEMO.mp4" controls muted loop playsinline poster="../assets/images/projects/lkz-demo.png"></video>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">01</div>
+            <div class="pd-video-card-title" data-lang-fr="Prédiction & Réconciliation" data-lang-en="Prediction & Reconciliation">Prediction & Reconciliation</div>
+            <p class="pd-video-card-desc" data-lang-fr="Démonstration de la prédiction côté client et la réconciliation serveur sur le mouvement du personnage." data-lang-en="Client-side prediction and server reconciliation on character movement.">Client-side prediction and server reconciliation on character movement.</p>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <video src="../assets/videos/lkz/INTERPOLATION DEMO.mp4" controls muted loop playsinline poster="../assets/images/projects/lkz-demo.png"></video>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">02</div>
+            <div class="pd-video-card-title" data-lang-fr="Interpolation" data-lang-en="Interpolation">Interpolation</div>
+            <p class="pd-video-card-desc" data-lang-fr="Interpolation des entités distantes — fluidité du rendu entre les snapshots réseau." data-lang-en="Remote entity interpolation — smooth rendering between network snapshots.">Remote entity interpolation — smooth rendering between network snapshots.</p>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <video src="../assets/videos/lkz/STRESS TEST 1.mp4" controls muted loop playsinline poster="../assets/images/projects/lkz-demo.png"></video>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">03</div>
+            <div class="pd-video-card-title" data-lang-fr="Stress Test 1 — 300 à 400 entités animées" data-lang-en="Stress Test 1 — 300 to 400 Animated Entities">Stress Test 1 — 300 to 400 Animated Entities</div>
+            <p class="pd-video-card-desc" data-lang-fr="Test de synchronisation avec 300 à 400 entités animées simultanément." data-lang-en="Sync stress test with 300 to 400 animated entities simultaneously.">Sync stress test with 300 to 400 animated entities simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <video src="../assets/videos/lkz/STRESS TEST 2.mp4" controls muted loop playsinline poster="../assets/images/projects/lkz-demo.png"></video>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">04</div>
+            <div class="pd-video-card-title" data-lang-fr="Stress Test 2 — 700 à 900 entités animées" data-lang-en="Stress Test 2 — 700 to 900 Animated Entities">Stress Test 2 — 700 to 900 Animated Entities</div>
+            <p class="pd-video-card-desc" data-lang-fr="Test de synchronisation poussé avec 700 à 900 entités animées simultanément." data-lang-en="Heavy sync stress test with 700 to 900 animated entities simultaneously.">Heavy sync stress test with 700 to 900 animated entities simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="nouvelle vidéo à venir" data-lang-en="new video coming soon">new video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">05</div>
+            <div class="pd-video-card-title" data-lang-fr="Test — 1 Client" data-lang-en="Test — 1 Client">Test — 1 Client</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="nouvelle vidéo à venir" data-lang-en="new video coming soon">new video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">06</div>
+            <div class="pd-video-card-title" data-lang-fr="Test — 2 Clients" data-lang-en="Test — 2 Clients">Test — 2 Clients</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="nouvelle vidéo à venir" data-lang-en="new video coming soon">new video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">07</div>
+            <div class="pd-video-card-title" data-lang-fr="Test — 4 Clients" data-lang-en="Test — 4 Clients">Test — 4 Clients</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Prev/Next -->
+    <div class="pd-nav-footer">
+      <a class="pd-nav-btn pd-nav-back" href="lkz-online-services">
+        <span class="pd-nav-dir" data-lang-fr="← Projet précédent" data-lang-en="← Previous project">← Projet précédent</span>
+        <span class="pd-nav-title" data-lang-fr="LKZ Online Services" data-lang-en="LKZ Online Services">LKZ Online Services</span>
+      </a>
+      <span></span>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Retour en haut" data-lang-fr-title="Retour en haut" data-lang-en-title="Back to top">&#8679;</a>
+
+  <!-- Shared page logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Responsive menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const mobileOnlyContainer = document.querySelector('.mobile-only-container');
+      if (mobileOnlyContainer) {
+        const socialIcons = document.querySelector('header .social-icons').cloneNode(true);
+        const langToggle = document.querySelector('header .lang-toggle').cloneNode(true);
+        mobileOnlyContainer.appendChild(langToggle);
+        mobileOnlyContainer.appendChild(socialIcons);
+      }
+      menuToggle.addEventListener('click', function () {
+        const isActive = mainNav.classList.toggle('active');
+        this.setAttribute('aria-expanded', isActive);
+      });
+      mainNav.addEventListener('click', (e) => {
+        if (e.target.closest('a') && !e.target.closest('.lang-toggle')) {
+          mainNav.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Language switcher
+      const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
+      const cvLinks = document.querySelectorAll('.cv-link');
+      const langToggles = document.querySelectorAll('.lang-toggle');
+
+      const setLanguage = (lang) => {
+        const key = 'lang' + lang.charAt(0).toUpperCase() + lang.slice(1);
+        translatableElements.forEach(el => {
+          if (el.dataset[key] !== undefined) {
+            el.innerHTML = el.dataset[key];
+          }
+          if (el.dataset[key + 'Title']) {
+            el.title = el.dataset[key + 'Title'];
+          }
+        });
+
+        document.querySelectorAll('[data-lang-content-fr]').forEach(el => {
+          el.style.display = lang === 'fr' ? '' : 'none';
+        });
+        document.querySelectorAll('[data-lang-content-en]').forEach(el => {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        cvLinks.forEach(link => {
+          const cvPath = link.dataset['cv' + lang];
+          if (cvPath) link.href = cvPath;
+        });
+
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('language', lang); } catch(e) {}
+
+        langToggles.forEach(toggle => {
+          if (lang === 'fr') toggle.classList.add('lang-fr');
+          else toggle.classList.remove('lang-fr');
+        });
+      };
+
+      document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-toggle')) {
+          const currentLang = localStorage.getItem('language') || 'en';
+          setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        }
+      });
+
+      const initialLang = (function() { try { return localStorage.getItem('language'); } catch(e) { return null; } })() || 'fr';
+      setLanguage(initialLang);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopButton.classList.add("visible");
+        else backToTopButton.classList.remove("visible");
+      });
+    });
+  </script>
+  <script src="../assets/js/media-gallery.js"></script>
+</body>
+</html>
