@@ -40,7 +40,7 @@
           <a href="https://www.linkedin.com/in/mateo-scarpetta-79a89328b" target="_blank" title="LinkedIn">
             <img src="../assets/images/icon/linkedin.png" alt="LinkedIn Icon">
           </a>
-          <a href="../assets/FR_CV_MATEO_SCARPETTA.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/FR_CV_MATEO_SCARPETTA.pdf" data-cv-en="../assets/EN_CV_MATEO_SCARPETTA.pdf">
+          <a href="../assets/CV%20FR.pdf" target="_blank" title="CV" class="cv-link" data-cv-fr="../assets/CV%20FR.pdf" data-cv-en="../assets/CV%20EN.pdf">
             <img src="../assets/images/icon/cv.png" alt="CV Icon" class="cv-icon-img">
           </a>
           <a href="mailto:leikyz17@outlook.com" title="Email">
@@ -215,7 +215,6 @@
 
       // Language switcher (matches index.html conventions)
       const translatableElements = document.querySelectorAll('[data-lang-fr], [data-lang-en]');
-      const cvLinks = document.querySelectorAll('.cv-link');
       const langToggles = document.querySelectorAll('.lang-toggle');
 
       const setLanguage = (lang) => {
@@ -235,12 +234,6 @@
         });
         document.querySelectorAll('[data-lang-content-en]').forEach(el => {
           el.style.display = lang === 'en' ? '' : 'none';
-        });
-
-        // CV links (mirrors index.html exact code, including its existing quirks)
-        cvLinks.forEach(link => {
-          const cvPath = link.dataset['cv' + lang];
-          if (cvPath) link.href = cvPath;
         });
 
         document.documentElement.lang = lang;
@@ -271,5 +264,6 @@
     });
   </script>
   <script src="../assets/js/media-gallery.js"></script>
+  <script src="../assets/js/cv-geo.js"></script>
 </body>
 </html>
