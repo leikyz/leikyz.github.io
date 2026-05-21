@@ -66,60 +66,132 @@
       <div class="pd-hero-meta">
         <span class="pd-hero-id">// project_heist_day</span>
         <div class="pd-hero-badges">
-          <span class="badge date-badge">2025</span>
-          <span class="badge wip-badge">WIP</span>
+          <span class="badge date-badge">2026</span>
+          <span class="badge done-badge">Done</span>
         </div>
       </div>
-      <span class="bundle-step" style="margin-bottom: 14px;">step_02 // game</span>
+      <span class="bundle-step" style="margin-bottom: 14px;">step_01 // game</span>
       <h1 data-lang-fr="Heist Day" data-lang-en="Heist Day">Heist Day</h1>
       <p class="pd-hero-subtitle"
-         data-lang-fr="Jeu d'action multijoueur en Unreal Engine 5 utilisant Epic Online Services pour la gestion des sessions et le matchmaking."
-         data-lang-en="Multiplayer action game built in Unreal Engine 5, using Epic Online Services for session management and matchmaking.">Jeu d'action multijoueur en Unreal Engine 5 utilisant Epic Online Services pour la gestion des sessions et le matchmaking.</p>
+         data-lang-fr="Shooter 2v2 dans un musée d'histoire fictif à Paris."
+         data-lang-en="2v2 shooter set in a fictional history museum in Paris.">Shooter 2v2 dans un musée d'histoire fictif à Paris.</p>
       <div class="pd-hero-tags project-tags">
-        <span class="tag">C++</span><span class="tag">UE5</span><span class="tag">EOS</span><span class="tag">Multiplayer</span><span class="tag">Gameplay</span>
+        <span class="tag">C++</span><span class="tag">UE5</span><span class="tag">EOS</span><span class="tag">Multiplayer</span><span class="tag">Gameplay</span><span class="tag">Go</span><span class="tag">Network</span>
       </div>
     </div>
 
-<div class="media-gallery" data-count="1">
-      <button class="media-gallery-prev" aria-label="Previous">‹</button>
-      <button class="media-gallery-next" aria-label="Next">›</button>
-
-<div class="media-gallery-viewport">
-        <div class="media-gallery-slot active" data-index="0">
-          <span class="media-gallery-slot-label">Heist Day — Gameplay</span>
-          <div class="card-img-placeholder"><span class="placeholder-icon">{ project_media }</span></div>
-        </div>
-      </div>
-
-<div class="media-gallery-strip">
-        <div class="media-gallery-strip-inner">
-          <button class="media-gallery-tab active" data-index="0">
-            <div class="media-gallery-tab-thumb"><div class="media-gallery-tab-thumb-placeholder">{ }</div></div>
-            <span class="media-gallery-tab-num">01</span>
-            <span class="media-gallery-tab-name">Heist Day — Gameplay</span>
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Top Screenshot -->
+    <div class="pd-media">
+      <div class="card-img-placeholder"><span class="placeholder-icon">{ project_media }</span></div>
     </div>
 
     <!-- Content + Sidebar -->
     <div class="pd-layout">
       <div class="pd-content">
-        <div data-lang-content-fr><p>Heist Day est un jeu d'action multijoueur développé en Unreal Engine 5. Il utilise Epic Online Services (EOS) pour la gestion des sessions et s'appuie sur un backend Go dédié pour le matchmaking.</p>
-<h4>Architecture</h4>
+        <div data-lang-content-fr><p>Heist Day est un shooter 2v2 dynamique dans un musée d'histoire fictif à Paris, développé en 2,5 mois par une équipe de 6 (4 développeurs, 2 artistes). La mécanique centrale repose sur l'interactivité environnementale : les joueurs peuvent extraire, lancer, cacher ou utiliser des objets pour attaquer leurs adversaires.</p>
+<p>Les matchs se déroulent en deux rounds chronométrés (3 à 5 minutes). À la fin du premier round, les équipes échangent les rôles :</p>
 <ul>
-  <li><strong>Client UE5 :</strong> Gameplay, rendu et interface développés en C++ et Blueprint.</li>
-  <li><strong>Epic Online Services :</strong> Gestion des sessions, authentification et présence des joueurs via EOS.</li>
-  <li><strong>Backend Matchmaking :</strong> Serveur Go (heist-day-matchmaker) pour l'équilibrage et l'orchestration des parties.</li>
-</ul></div>
-        <div data-lang-content-en style="display:none"><p>Heist Day is a multiplayer action game developed in Unreal Engine 5. It uses Epic Online Services (EOS) for session management and relies on a dedicated Go backend for matchmaking.</p>
-<h4>Architecture</h4>
+  <li><strong>Sécurité du Musée :</strong> Empêcher le vol des artefacts et intercepter les voleurs. Accès aux caméras de surveillance et possibilité de déclencher l'alarme pour réduire le temps de braquage.</li>
+  <li><strong>Voleurs :</strong> Accumuler une somme prédéfinie en volant des objets spécifiques. Possibilité de détruire l'environnement pour créer le chaos.</li>
+</ul>
+<p>La partie se conclut par un écran de statistiques (kills, morts, interceptions, objets volés, équipe gagnante) avant de retourner dans le lobby interactif 3D.</p>
+<h4>Mes Contributions</h4>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">01</span>
+    <span class="pd-section-title">Lead Developer</span>
+  </div>
+  <ul>
+    <li>Direction des équipes de développement et artistique, distribution des tâches et définition de la roadmap technique.</li>
+    <li>Maintien d'une vision cohérente pour atteindre les objectifs finaux du projet.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">02</span>
+    <span class="pd-section-title">Architecture Backend & Matchmaking</span>
+  </div>
+  <ul>
+    <li><strong>Backend Go custom :</strong> Outil externe de matchmaking et gestion des serveurs de jeu via HTTP + JSON.</li>
+    <li><strong>Automatisation :</strong> Lancement automatisé des serveurs dédiés pour chaque nouvelle partie.</li>
+    <li><strong>EOS Integration :</strong> Gestion des comptes, sessions et invitations via Epic Online Services dans un lobby 3D interactif.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">03</span>
+    <span class="pd-section-title">Architecture Réseau & Serveur de Jeu</span>
+  </div>
+  <ul>
+    <li>Game loop réseau complet (Game State, Player State, Game Mode), logique 2v2, échange de rôles entre rounds et assignation d'équipes via matchmaking.</li>
+    <li>Création et gestion des sessions avec OSSv1.</li>
+    <li>Builds Client et Serveur Dédié, déploiement des serveurs sur un hébergeur distant.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">04</span>
+    <span class="pd-section-title">Intégration Gameplay & Synchronisation</span>
+  </div>
+  <ul>
+    <li>Système de tir entièrement synchronisé, gestion des respawns et mécanique d'alarme interactive.</li>
+    <li>Intégration et réplication réseau des objets fracturables (Unreal Fracture plugin) — performances optimisées.</li>
+    <li>Synchronisation réseau de l'UI (animations, stats kills/morts, cinématiques d'ouverture par équipe, écrans victoire/défaite).</li>
+    <li>Synchronisation audio (effets sonores, events) et décals de balles, polish global du game loop.</li>
+  </ul>
+</div></div>
+        <div data-lang-content-en style="display:none"><p>Heist Day is a dynamic 2v2 shooter set in a fictional history museum in Paris, developed over 2.5 months by a team of 6 (4 developers, 2 artists). The core gameplay revolves around environmental interactivity — players can extract, throw, stash, or use objects scattered around the map to attack opponents.</p>
+<p>Matches consist of two timed rounds (3 to 5 minutes). At the end of the first round, teams swap roles:</p>
 <ul>
-  <li><strong>UE5 Client:</strong> Gameplay, rendering, and UI developed in C++ and Blueprint.</li>
-  <li><strong>Epic Online Services:</strong> Session management, authentication, and player presence via EOS.</li>
-  <li><strong>Matchmaking Backend:</strong> Go server (heist-day-matchmaker) for team balancing and game orchestration.</li>
-</ul></div>
+  <li><strong>Museum Security:</strong> Must prevent artifacts from being stolen and intercept the robbers. Guards can access surveillance cameras and trigger the museum alarm to reduce remaining heist time.</li>
+  <li><strong>Robbers:</strong> Must accumulate a predefined amount of money by stealing specific objects. They can destroy the environment to cause chaos and disorganize the security team.</li>
+</ul>
+<p>The match concludes with a statistics summary screen (kills, deaths, interceptions, stolen objects, winning team) before returning players to an interactive 3D lobby.</p>
+<h4>My Contributions</h4>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">01</span>
+    <span class="pd-section-title">Lead Developer</span>
+  </div>
+  <ul>
+    <li>Directed the development and art teams, ensuring effective task distribution and technical roadmap.</li>
+    <li>Maintained a coherent vision to achieve the project's final goals throughout the 2.5 months.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">02</span>
+    <span class="pd-section-title">Backend Architecture & Matchmaking</span>
+  </div>
+  <ul>
+    <li><strong>Custom Go Backend:</strong> Designed a custom matchmaking and game server management tool communicating via HTTP + JSON.</li>
+    <li><strong>Automation:</strong> Automated dedicated server launches for each new match, ensuring seamless replayability.</li>
+    <li><strong>EOS Integration:</strong> Implemented Epic Online Services for account management, sessions, and the invitation system within an interactive 3D lobby.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">03</span>
+    <span class="pd-section-title">Network Architecture & Game Server</span>
+  </div>
+  <ul>
+    <li>Built the complete networked game loop (Game State, Player State, Game Mode), 2v2 logic, team swapping between rounds, and matchmaking-based team assignments.</li>
+    <li>Session creation and management via OSSv1.</li>
+    <li>Managed Client and Dedicated Server builds, deployed servers on a remote host.</li>
+  </ul>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">04</span>
+    <span class="pd-section-title">Gameplay Integration & Synchronization</span>
+  </div>
+  <ul>
+    <li>Developed a fully synchronized shooting system, managed respawns, and implemented the interactive alarm mechanic.</li>
+    <li>Integrated and network-replicated fracturable objects using Unreal's Fracture plugin — optimized performance.</li>
+    <li>Handled network-synced UI (animations, kill/death stats, team-specific opening cinematics, win/loss screens).</li>
+    <li>Network-synchronized audio (sound effects, events) and bullet decals, plus overall game loop polish.</li>
+  </ul>
+</div></div>
       </div>
 
       <aside class="pd-sidebar">
@@ -127,47 +199,191 @@
           <h5 data-lang-fr="// Informations" data-lang-en="// Information">// Informations</h5>
           <div class="pd-info-row">
             <span class="pd-info-label" data-lang-fr="Année" data-lang-en="Year">Année</span>
-            <span class="pd-info-value">2025</span>
+            <span class="pd-info-value">2026</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Durée" data-lang-en="Duration">Durée</span>
+            <span class="pd-info-value" data-lang-fr="2,5 mois" data-lang-en="2.5 months">2,5 mois</span>
           </div>
           <div class="pd-info-row">
             <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
-            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            <span class="pd-info-value" data-lang-fr="6 membres" data-lang-en="6 members">6 membres</span>
           </div>
           <div class="pd-info-row">
             <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
-            <span class="pd-info-value" data-lang-fr="Développeur solo" data-lang-en="Solo developer">Développeur solo</span>
+            <span class="pd-info-value" data-lang-fr="Lead Dev · Réseau · Gameplay" data-lang-en="Lead Dev · Network · Gameplay">Lead Dev · Réseau · Gameplay</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Client" data-lang-en="Client">Client</span>
+            <span class="pd-info-value" data-lang-fr="France" data-lang-en="France">France</span>
+          </div>
+          <div class="pd-info-row">
+            <span class="pd-info-label" data-lang-fr="Serveur" data-lang-en="Server">Serveur</span>
+            <span class="pd-info-value" data-lang-fr="Frankfurt, DE" data-lang-en="Frankfurt, DE">Frankfurt, DE</span>
           </div>
         </div>
 
         <div class="pd-info-card">
           <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
           <div class="pd-stack-list">
-            <span>C++</span><span>UE5</span><span>Blueprint</span><span>EOS</span>
+            <span>C++</span><span>UE5</span><span>Blueprint</span><span>EOS</span><span>Go</span><span>OSSv1</span>
           </div>
         </div>
         
         <div class="pd-chain">
           <h5 data-lang-fr="// Parcours du Bundle" data-lang-en="// Bundle Journey">// Parcours du Bundle</h5>
-          <a class="pd-chain-item" href="heist-day-matchmaker">
+          <div class="pd-chain-item current">
             <div class="pd-chain-num">01</div>
             <div class="pd-chain-body">
-              <div class="pd-chain-title">heist-day-matchmaker</div>
-              <span class="pd-chain-step">step_01 // backend</span>
-            </div>
-          </a>
-<div class="pd-chain-item current">
-            <div class="pd-chain-num">02</div>
-            <div class="pd-chain-body">
               <div class="pd-chain-title">Heist Day</div>
-              <span class="pd-chain-step">step_02 // game</span>
+              <span class="pd-chain-step">step_01 // game</span>
             </div>
           </div>
+          <a class="pd-chain-item" href="heist-day-matchmaker">
+            <div class="pd-chain-num">02</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">heist-day-matchmaker</div>
+              <span class="pd-chain-step">step_02 // backend</span>
+            </div>
+          </a>
         </div>
       </aside>
     </div>
 
+    <!-- Video Gallery -->
+    <div class="pd-video-gallery">
+      <div class="pd-video-gallery-header">
+        <h4 class="pd-video-gallery-title" data-lang-fr="// Galerie Vidéo" data-lang-en="// Video Gallery">// Video Gallery</h4>
+        <span class="pd-video-gallery-count" data-lang-fr="vidéos à venir" data-lang-en="videos coming soon">videos coming soon</span>
+      </div>
+      <p class="pd-video-gallery-intro" data-lang-fr="Toutes les vidéos sont enregistrées avec le client en France et le serveur à Francfort (Allemagne) — conditions de latence réelles." data-lang-en="All videos recorded with the client in France and the server in Frankfurt (Germany) — real-world latency conditions.">All videos recorded with the client in France and the server in Frankfurt (Germany) — real-world latency conditions.</p>
+      <div class="pd-video-grid">
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="vidéo à venir" data-lang-en="video coming soon">video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">01</div>
+            <div class="pd-video-card-title" data-lang-fr="Gameplay — Round Voleurs" data-lang-en="Gameplay — Robbers Round">Gameplay — Robbers Round</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="vidéo à venir" data-lang-en="video coming soon">video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">02</div>
+            <div class="pd-video-card-title" data-lang-fr="Gameplay — Round Sécurité" data-lang-en="Gameplay — Security Round">Gameplay — Security Round</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="vidéo à venir" data-lang-en="video coming soon">video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">03</div>
+            <div class="pd-video-card-title" data-lang-fr="Réseau — Matchmaking & Lobby" data-lang-en="Network — Matchmaking & Lobby">Network — Matchmaking & Lobby</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">▶</span>
+              <span data-lang-fr="vidéo à venir" data-lang-en="video coming soon">video coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">04</div>
+            <div class="pd-video-card-title" data-lang-fr="Destruction Environnementale" data-lang-en="Environmental Destruction">Environmental Destruction</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Screenshot Gallery -->
+    <div class="pd-video-gallery">
+      <div class="pd-video-gallery-header">
+        <h4 class="pd-video-gallery-title" data-lang-fr="// Galerie Screenshots" data-lang-en="// Screenshot Gallery">// Screenshot Gallery</h4>
+        <span class="pd-video-gallery-count" data-lang-fr="captures à venir" data-lang-en="screenshots coming soon">screenshots coming soon</span>
+      </div>
+      <div class="pd-video-grid">
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">⊞</span>
+              <span data-lang-fr="capture à venir" data-lang-en="screenshot coming soon">screenshot coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">01</div>
+            <div class="pd-video-card-title" data-lang-fr="Musée — Hall Principal" data-lang-en="Museum — Main Hall">Museum — Main Hall</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">⊞</span>
+              <span data-lang-fr="capture à venir" data-lang-en="screenshot coming soon">screenshot coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">02</div>
+            <div class="pd-video-card-title" data-lang-fr="Gameplay — Combat" data-lang-en="Gameplay — Combat">Gameplay — Combat</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">⊞</span>
+              <span data-lang-fr="capture à venir" data-lang-en="screenshot coming soon">screenshot coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">03</div>
+            <div class="pd-video-card-title" data-lang-fr="Écran de Statistiques" data-lang-en="Statistics Screen">Statistics Screen</div>
+          </div>
+        </div>
+
+        <div class="pd-video-card">
+          <div class="pd-video-card-media">
+            <div class="pd-video-placeholder">
+              <span class="pd-video-placeholder-icon">⊞</span>
+              <span data-lang-fr="capture à venir" data-lang-en="screenshot coming soon">screenshot coming soon</span>
+            </div>
+          </div>
+          <div class="pd-video-card-info">
+            <div class="pd-video-card-num">04</div>
+            <div class="pd-video-card-title" data-lang-fr="Lobby 3D Interactif" data-lang-en="Interactive 3D Lobby">Interactive 3D Lobby</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <!-- Prev/Next -->
     <div class="pd-nav-footer">
+      <span></span>
+      <a class="pd-nav-btn pd-nav-next" href="heist-day-matchmaker">
+        <span class="pd-nav-dir" data-lang-fr="Projet suivant →" data-lang-en="Next project →">Projet suivant →</span>
+        <span class="pd-nav-title" data-lang-fr="heist-day-matchmaker" data-lang-en="heist-day-matchmaker">heist-day-matchmaker</span>
+      </a>
     </div>
   </main>
 

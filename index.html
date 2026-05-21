@@ -440,23 +440,23 @@
                 <div class="ide-panel-title-block">
                   <h3 class="ide-panel-title">Heist Day</h3>
                   <p class="ide-panel-desc"
-                     data-lang-fr="Jeu d'action multijoueur en Unreal Engine 5, accompagné d'un petit script Go pour le matchmaking. Projet d'équipe : 4 programmeurs et 1 artiste, démarré en 2026."
-                     data-lang-en="Multiplayer action game in Unreal Engine 5, paired with a lightweight Go matchmaking script. Team project: 4 programmers and 1 artist, started in 2026.">
-                    Jeu d'action multijoueur en Unreal Engine 5, accompagné d'un petit script Go pour le matchmaking. Projet d'équipe : 4 programmeurs et 1 artiste, démarré en 2026.
+                     data-lang-fr="Shooter 2v2 dans un musée à Paris, avec backend Go de matchmaking. 6 membres (4 développeurs, 2 artistes) — 2,5 mois de développement."
+                     data-lang-en="2v2 shooter set in a Paris museum, with a Go matchmaking backend. 6 members (4 developers, 2 artists) — 2.5 months of development.">
+                    Shooter 2v2 dans un musée à Paris, avec backend Go de matchmaking. 6 membres (4 développeurs, 2 artistes) — 2,5 mois de développement.
                   </p>
                   <!-- Role / Team / Year strip -->
                   <div class="ide-panel-meta-row">
                     <span class="ide-panel-meta-tag">
                       <span class="ide-panel-meta-key" data-lang-fr="rôle" data-lang-en="role">rôle</span>
-                      <span class="ide-panel-meta-val" data-lang-fr="Lead projet · prog. réseau" data-lang-en="Lead · network programmer">Lead projet · prog. réseau</span>
+                      <span class="ide-panel-meta-val" data-lang-fr="Lead Dev · Réseau · Gameplay" data-lang-en="Lead Dev · Network · Gameplay">Lead Dev · Réseau · Gameplay</span>
                     </span>
                     <span class="ide-panel-meta-tag">
                       <span class="ide-panel-meta-key" data-lang-fr="équipe" data-lang-en="team">équipe</span>
-                      <span class="ide-panel-meta-val" data-lang-fr="4 prog. · 1 artiste" data-lang-en="4 prog · 1 artist">4 prog. · 1 artiste</span>
+                      <span class="ide-panel-meta-val" data-lang-fr="4 dev. · 2 artistes" data-lang-en="4 dev · 2 artists">4 dev. · 2 artistes</span>
                     </span>
                     <span class="ide-panel-meta-tag">
-                      <span class="ide-panel-meta-key" data-lang-fr="démarré" data-lang-en="started">démarré</span>
-                      <span class="ide-panel-meta-val">2026</span>
+                      <span class="ide-panel-meta-key" data-lang-fr="durée" data-lang-en="duration">durée</span>
+                      <span class="ide-panel-meta-val" data-lang-fr="2,5 mois" data-lang-en="2.5 months">2,5 mois</span>
                     </span>
                   </div>
                 </div>
@@ -468,7 +468,7 @@
 
             <ul class="ide-file-list">
               <li>
-                <div class="ide-file-row ide-file-row-placeholder" aria-disabled="true">
+                <a class="ide-file-row" href="projects/heist-day">
                   <span class="ide-file-num">01</span>
                   <div class="ide-file-thumb">
                     <div class="ide-file-thumb-placeholder">
@@ -478,25 +478,26 @@
                   <div class="ide-file-info">
                     <div class="ide-file-titleline">
                       <span class="ide-file-name">heist_day</span><span class="ide-file-ext">.uproject</span>
-                      <span class="ide-file-step" data-lang-fr="// jeu" data-lang-en="// game">// jeu</span>
+                      <span class="ide-file-step">step_01 // game</span>
                     </div>
                     <h4 class="ide-file-display">Heist Day</h4>
                     <p class="ide-file-desc"
-                       data-lang-fr="Jeu d'action multijoueur en Unreal Engine 5 utilisant Epic Online Services."
-                       data-lang-en="Multiplayer action game built in Unreal Engine 5, using Epic Online Services.">
-                      Jeu d'action multijoueur en Unreal Engine 5 utilisant Epic Online Services.
+                       data-lang-fr="Shooter 2v2 en UE5 — réseau complet, EOS, destruction environnementale et matchmaking via backend Go custom."
+                       data-lang-en="2v2 UE5 shooter — full network, EOS, environmental destruction and matchmaking via custom Go backend.">
+                      Shooter 2v2 en UE5 — réseau complet, EOS, destruction environnementale et matchmaking via backend Go custom.
                     </p>
                     <div class="ide-file-tags">
                       <span class="tag">C++</span><span class="tag">UE5</span><span class="tag">EOS</span><span class="tag">Multiplayer</span>
                     </div>
                   </div>
                   <div class="ide-file-right">
-                    <span class="badge" style="background:rgba(245,181,86,0.15);color:#f5b556;border-color:rgba(245,181,86,0.3)" data-lang-fr="bientôt" data-lang-en="soon">soon</span>
+                    <span class="badge done-badge">Done</span>
+                    <div class="ide-file-arrow" aria-hidden="true">→</div>
                   </div>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="ide-file-row ide-file-row-placeholder" aria-disabled="true">
+                <a class="ide-file-row" href="projects/heist-day-matchmaker">
                   <span class="ide-file-num">02</span>
                   <div class="ide-file-thumb">
                     <div class="ide-file-thumb-placeholder">
@@ -506,22 +507,23 @@
                   <div class="ide-file-info">
                     <div class="ide-file-titleline">
                       <span class="ide-file-name">matchmaker</span><span class="ide-file-ext">.go</span>
-                      <span class="ide-file-step" data-lang-fr="// script" data-lang-en="// script">// script</span>
+                      <span class="ide-file-step">step_02 // backend</span>
                     </div>
-                    <h4 class="ide-file-display">Heist Day Matchmaker</h4>
+                    <h4 class="ide-file-display">heist-day-matchmaker</h4>
                     <p class="ide-file-desc"
-                       data-lang-fr="Petit script Go pour le matchmaking de Heist Day — assemblage des sessions."
-                       data-lang-en="Lightweight Go script handling matchmaking for Heist Day — session assembly.">
-                      Petit script Go pour le matchmaking de Heist Day — assemblage des sessions.
+                       data-lang-fr="Backend Go concurrent pour le matchmaking et l'orchestration des serveurs — REST API, Goroutines, Channels et Mutex."
+                       data-lang-en="Concurrent Go backend for matchmaking and server orchestration — REST API, Goroutines, Channels and Mutex.">
+                      Backend Go concurrent pour le matchmaking et l'orchestration des serveurs — REST API, Goroutines, Channels et Mutex.
                     </p>
                     <div class="ide-file-tags">
-                      <span class="tag">Go</span><span class="tag" data-lang-fr="script" data-lang-en="script">script</span>
+                      <span class="tag">Go</span><span class="tag">REST API</span><span class="tag">Backend</span><span class="tag">Goroutines</span>
                     </div>
                   </div>
                   <div class="ide-file-right">
-                    <span class="badge" style="background:rgba(245,181,86,0.15);color:#f5b556;border-color:rgba(245,181,86,0.3)" data-lang-fr="bientôt" data-lang-en="soon">soon</span>
+                    <span class="badge done-badge">Done</span>
+                    <div class="ide-file-arrow" aria-hidden="true">→</div>
                   </div>
-                </div>
+                </a>
               </li>
             </ul>
           </div>

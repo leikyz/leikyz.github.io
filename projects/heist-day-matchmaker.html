@@ -67,10 +67,10 @@
         <span class="pd-hero-id">// project_heist_day_matchmaker</span>
         <div class="pd-hero-badges">
           <span class="badge date-badge">2025</span>
-          <span class="badge wip-badge">WIP</span>
+          <span class="badge done-badge">Done</span>
         </div>
       </div>
-      <span class="bundle-step" style="margin-bottom: 14px;">step_01 // backend</span>
+      <span class="bundle-step" style="margin-bottom: 14px;">step_02 // backend</span>
       <h1 data-lang-fr="heist-day-matchmaker" data-lang-en="heist-day-matchmaker">heist-day-matchmaker</h1>
       <p class="pd-hero-subtitle"
          data-lang-fr="Backend de matchmaking en Go pour Heist Day — gestion des lobbies, équilibrage des équipes et orchestration des sessions."
@@ -80,48 +80,82 @@
       </div>
     </div>
 
-<div class="media-gallery" data-count="1">
-      <button class="media-gallery-prev" aria-label="Previous">‹</button>
-      <button class="media-gallery-next" aria-label="Next">›</button>
-
-<div class="media-gallery-viewport">
-        <div class="media-gallery-slot active" data-index="0">
-          <span class="media-gallery-slot-label">Matchmaker — Demo</span>
-          <div class="card-img-placeholder"><span class="placeholder-icon">{ project_media }</span></div>
-        </div>
-      </div>
-
-<div class="media-gallery-strip">
-        <div class="media-gallery-strip-inner">
-          <button class="media-gallery-tab active" data-index="0">
-            <div class="media-gallery-tab-thumb"><div class="media-gallery-tab-thumb-placeholder">{ }</div></div>
-            <span class="media-gallery-tab-num">01</span>
-            <span class="media-gallery-tab-name">Matchmaker — Demo</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    </div>
 
     <!-- Content + Sidebar -->
     <div class="pd-layout">
       <div class="pd-content">
-        <div data-lang-content-fr><p>heist-day-matchmaker est le serveur backend en Go qui orchestre le matchmaking de Heist Day. Il s'interface avec Epic Online Services et gère la création des parties côté serveur.</p>
-<h4>Fonctionnalités</h4>
-<ul>
-  <li><strong>Gestion des Lobbies :</strong> Création et gestion des salles d'attente avant les parties.</li>
-  <li><strong>Équilibrage :</strong> Algorithme d'équilibrage basé sur le niveau des joueurs.</li>
-  <li><strong>Orchestration des Sessions :</strong> Communication avec EOS pour la création et gestion des sessions.</li>
-  <li><strong>API REST :</strong> Interface HTTP exposée au client UE5 pour le matchmaking.</li>
-</ul></div>
-        <div data-lang-content-en style="display:none"><p>heist-day-matchmaker is the Go backend server orchestrating matchmaking for Heist Day. It interfaces with Epic Online Services and handles game creation server-side.</p>
-<h4>Features</h4>
-<ul>
-  <li><strong>Lobby Management:</strong> Creation and management of pre-match waiting rooms.</li>
-  <li><strong>Team Balancing:</strong> Balancing algorithm based on player skill.</li>
-  <li><strong>Session Orchestration:</strong> Communication with EOS for session creation and management.</li>
-  <li><strong>REST API:</strong> HTTP interface exposed to the UE5 client for matchmaking.</li>
-</ul></div>
+        <div data-lang-content-fr><p>heist-day-matchmaker est un service backend indépendant, performant et concurrent en Go, conçu pour gérer le matchmaking des joueurs et le cycle de vie complet des serveurs de jeu pour Heist Day.</p>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">01</span>
+    <span class="pd-section-title">API REST & Communication HTTP</span>
+  </div>
+  <p>Serveur HTTP léger communiquant en JSON, exposant des routes pour les clients (<code>/matchmake</code>) et des callbacks pour les serveurs dédiés (<code>/server_ready</code>).</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">02</span>
+    <span class="pd-section-title">Système de File Thread-Safe</span>
+  </div>
+  <p>Algorithme de matchmaking sécurisé par <code>sync.Mutex</code> pour gérer les accès concurrents en toute sécurité. Le système gère aussi bien les joueurs solo que les groupes préformés (lobbies), tout en filtrant les requêtes en double.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">03</span>
+    <span class="pd-section-title">Équilibrage & Attribution des Équipes</span>
+  </div>
+  <p>Logique de distribution dynamique garantissant que les groupes d'amis restent dans la même équipe (Voleurs ou Sécurité) lors du lancement d'un match 2v2.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">04</span>
+    <span class="pd-section-title">Orchestration Dynamique des Serveurs Unreal</span>
+  </div>
+  <p>Plutôt que de maintenir des serveurs inactifs, le backend lance les processus Unreal Server à la volée via <code>exec.Command</code>, en allouant dynamiquement des ports depuis un pool géré par des Channels — jusqu'à 10 serveurs simultanés.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">05</span>
+    <span class="pd-section-title">Gestion Asynchrone via Goroutines</span>
+  </div>
+  <p>Concurrence Go avancée (Goroutines + Channels). Lors de la formation d'un match, le backend maintient les réponses HTTP des clients de manière asynchrone jusqu'à ce que le serveur Unreal confirme qu'il est lancé et prêt, évitant les timeouts côté client.</p>
+</div></div>
+        <div data-lang-content-en style="display:none"><p>heist-day-matchmaker is an independent, high-performance, concurrent backend service in Go, designed to manage player matchmaking and the full lifecycle of game servers for Heist Day.</p>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">01</span>
+    <span class="pd-section-title">REST API & HTTP Communication</span>
+  </div>
+  <p>Lightweight HTTP server communicating via JSON, exposing queue routes for clients (<code>/matchmake</code>) and callbacks for the dedicated servers (<code>/server_ready</code>).</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">02</span>
+    <span class="pd-section-title">Thread-Safe Queueing System</span>
+  </div>
+  <p>Matchmaking algorithm secured by <code>sync.Mutex</code> to safely handle concurrent access. The system manages both solo players and pre-formed groups (lobbies) while filtering out duplicate requests.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">03</span>
+    <span class="pd-section-title">Team Balancing & Assignment</span>
+  </div>
+  <p>Dynamic distribution logic ensuring that friend groups remain on the same team (Robbers or Security) when the 2v2 match launches.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">04</span>
+    <span class="pd-section-title">Dynamic Unreal Server Orchestration</span>
+  </div>
+  <p>Instead of running idle servers, the backend launches Unreal Server processes on the fly via <code>exec.Command</code>, dynamically allocating ports from an available pool managed via Channels — supporting up to 10 simultaneous servers.</p>
+</div>
+<div class="pd-section">
+  <div class="pd-section-head">
+    <span class="pd-section-num">05</span>
+    <span class="pd-section-title">Asynchronous Management via Goroutines</span>
+  </div>
+  <p>Advanced Go concurrency (Goroutines + Channels). When a match is found, the backend asynchronously holds the clients' HTTP responses until the Unreal server confirms it is fully launched and ready, preventing client-side connection timeouts.</p>
+</div></div>
       </div>
 
       <aside class="pd-sidebar">
@@ -133,43 +167,48 @@
           </div>
           <div class="pd-info-row">
             <span class="pd-info-label" data-lang-fr="Équipe" data-lang-en="Team">Équipe</span>
-            <span class="pd-info-value" data-lang-fr="1 personne" data-lang-en="1 person">1 personne</span>
+            <span class="pd-info-value" data-lang-fr="6 personnes" data-lang-en="6 members">6 personnes</span>
           </div>
           <div class="pd-info-row">
             <span class="pd-info-label" data-lang-fr="Rôle" data-lang-en="Role">Rôle</span>
-            <span class="pd-info-value" data-lang-fr="Développeur backend" data-lang-en="Backend developer">Développeur backend</span>
+            <span class="pd-info-value" data-lang-fr="Lead Dev · Backend Go" data-lang-en="Lead Dev · Go Backend">Lead Dev · Backend Go</span>
           </div>
         </div>
 
         <div class="pd-info-card">
           <h5 data-lang-fr="// Stack Technique" data-lang-en="// Tech Stack">// Stack Technique</h5>
           <div class="pd-stack-list">
-            <span>Go</span><span>REST API</span><span>EOS</span>
+            <span>Go</span><span>REST API</span><span>HTTP/JSON</span><span>Goroutines</span><span>Channels</span><span>Mutex</span>
           </div>
         </div>
         
         <div class="pd-chain">
           <h5 data-lang-fr="// Parcours du Bundle" data-lang-en="// Bundle Journey">// Parcours du Bundle</h5>
-          <div class="pd-chain-item current">
+          <a class="pd-chain-item" href="heist-day">
             <div class="pd-chain-num">01</div>
             <div class="pd-chain-body">
-              <div class="pd-chain-title">heist-day-matchmaker</div>
-              <span class="pd-chain-step">step_01 // backend</span>
-            </div>
-          </div>
-<a class="pd-chain-item" href="heist-day">
-            <div class="pd-chain-num">02</div>
-            <div class="pd-chain-body">
               <div class="pd-chain-title">Heist Day</div>
-              <span class="pd-chain-step">step_02 // game</span>
+              <span class="pd-chain-step">step_01 // game</span>
             </div>
           </a>
+          <div class="pd-chain-item current">
+            <div class="pd-chain-num">02</div>
+            <div class="pd-chain-body">
+              <div class="pd-chain-title">heist-day-matchmaker</div>
+              <span class="pd-chain-step">step_02 // backend</span>
+            </div>
+          </div>
         </div>
       </aside>
     </div>
 
     <!-- Prev/Next -->
     <div class="pd-nav-footer">
+      <a class="pd-nav-btn pd-nav-back" href="heist-day">
+        <span class="pd-nav-dir" data-lang-fr="← Projet précédent" data-lang-en="← Previous project">← Projet précédent</span>
+        <span class="pd-nav-title" data-lang-fr="Heist Day" data-lang-en="Heist Day">Heist Day</span>
+      </a>
+      <span></span>
     </div>
   </main>
 

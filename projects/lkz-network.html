@@ -80,11 +80,6 @@
       </div>
     </div>
 
-    <!-- Screenshot -->
-    <div class="pd-media">
-      <img src="../assets/images/projects/lkznetwork2.png" alt="LKZ Network Engine">
-    </div>
-
     <!-- Content + Sidebar -->
     <div class="pd-layout">
       <div class="pd-content">
@@ -92,57 +87,65 @@
 <p>En février 2025, j'ai tout reconstruit en C++ depuis zéro. L'objectif spécifique de ce moteur : <strong>synchroniser le maximum d'entités en temps réel avec un overhead minimal</strong>.</p>
 <p>Une intégration clé est <strong>Recast Navigation</strong> — une librairie de pathfinding open source utilisée dans toute l'industrie. J'exporte les données de navmesh depuis Unity en fichiers texte, les reconstruit côté serveur avec Recast, puis configure les agents pour que le serveur gère toutes les simulations : joueurs et entités IA. Zéro pathfinding côté client — l'autorité est entièrement serveur.</p>
 <h4>Fonctionnalités Actuelles</h4>
-<ul>
-  <li>Event-Driven Networking</li>
-  <li>I/O Asynchrones (IOCP)</li>
-  <li>Multithread</li>
-  <li>Sérialisation Big Endian</li>
-  <li>Protocole custom efficace</li>
-  <li>Bitpacking partiel</li>
-  <li>Tracker de métriques complet — affiché dans le client via LKZ Demo</li>
-  <li>Serveur Autoritaire Complet</li>
-  <li>Intégration ECS pour les entités</li>
-  <li>Navigation, Pathfinding et Navmesh avec Recast Navigation</li>
-  <li>Architecture par session — s'appuie sur LKZ Online Services pour les sessions et le matchmaking</li>
-  <li>Architecture légère</li>
-  <li>UDP pour la simulation, TCP pour la fiabilité</li>
-  <li>Batching optimisé</li>
-  <li>Pipeline I/O Zero-Allocation</li>
-</ul>
+<div class="pd-section">
+  <ul>
+    <li>Event-Driven Networking</li>
+    <li>I/O Asynchrones (IOCP)</li>
+    <li>Multithread</li>
+    <li>Sérialisation Big Endian</li>
+    <li>Protocole custom efficace</li>
+    <li>Bitpacking partiel</li>
+    <li>Tracker de métriques complet — affiché dans le client via LKZ Demo</li>
+    <li>Serveur Autoritaire Complet</li>
+    <li>Intégration ECS pour les entités</li>
+    <li>Navigation, Pathfinding et Navmesh avec Recast Navigation</li>
+    <li>Architecture par session — s'appuie sur LKZ Online Services pour les sessions et le matchmaking</li>
+    <li>Architecture légère</li>
+    <li>UDP pour la simulation, TCP pour la fiabilité</li>
+    <li>Batching optimisé</li>
+    <li>Pipeline I/O Zero-Allocation</li>
+  </ul>
+</div>
 <h4>Objectifs Futurs</h4>
-<ul>
-  <li>Paquets chiffrés pour une transmission de données sécurisée</li>
-  <li>Fragmentation et réassemblage des paquets pour supporter de grandes charges de données</li>
-  <li>Authentification cryptographiquement sécurisée via des jetons de connexion</li>
-</ul>
+<div class="pd-section">
+  <ul>
+    <li>Paquets chiffrés pour une transmission de données sécurisée</li>
+    <li>Fragmentation et réassemblage des paquets pour supporter de grandes charges de données</li>
+    <li>Authentification cryptographiquement sécurisée via des jetons de connexion</li>
+  </ul>
+</div>
 <p class="pd-demo-note">Ce projet tourne comme un serveur console — toutes les métriques et démos sont dans <a href="lkz-demo">LKZ Demo →</a></p></div>
         <div data-lang-content-en style="display:none"><p>I started learning network programming in October 2024 with a C# TCP engine that let me sync two players in Unity. That first prototype is available on GitHub if you want to see where it started. I then adapted it to UDP to understand packet loss, reliability, and real-time sync challenges.</p>
 <p>In February 2025 I rebuilt everything from scratch in C++. The engine has one specific goal: <strong>sync as many entities as possible in real time with minimal overhead</strong>.</p>
 <p>A key integration is <strong>Recast Navigation</strong> — an open-source pathfinding library used across the game industry. I export navmesh data from Unity as text files, rebuild the full navigation mesh server-side with Recast, then create and configure agents so the server handles every simulation: both players and AI entities. No client-side pathfinding — fully authoritative server.</p>
 <h4>Current Features</h4>
-<ul>
-  <li>Event-Driven Networking</li>
-  <li>Asynchronous I/O (IOCP)</li>
-  <li>Multithreaded</li>
-  <li>Big Endian Serialization</li>
-  <li>Custom efficient protocol</li>
-  <li>Partial Bitpacking</li>
-  <li>Full metrics tracker for monitoring — displayed in the client via LKZ Demo</li>
-  <li>Full Authoritative Server</li>
-  <li>ECS Integration for entities</li>
-  <li>Navigation, Pathfinding & Navmesh with Recast Navigation</li>
-  <li>Session-based architecture — relies on LKZ Online Services for sessions and matchmaking</li>
-  <li>Lightweight architecture</li>
-  <li>UDP for simulation, TCP for reliability</li>
-  <li>Optimized Batching</li>
-  <li>Zero-Allocation I/O Pipeline</li>
-</ul>
+<div class="pd-section">
+  <ul>
+    <li>Event-Driven Networking</li>
+    <li>Asynchronous I/O (IOCP)</li>
+    <li>Multithreaded</li>
+    <li>Big Endian Serialization</li>
+    <li>Custom efficient protocol</li>
+    <li>Partial Bitpacking</li>
+    <li>Full metrics tracker for monitoring — displayed in the client via LKZ Demo</li>
+    <li>Full Authoritative Server</li>
+    <li>ECS Integration for entities</li>
+    <li>Navigation, Pathfinding & Navmesh with Recast Navigation</li>
+    <li>Session-based architecture — relies on LKZ Online Services for sessions and matchmaking</li>
+    <li>Lightweight architecture</li>
+    <li>UDP for simulation, TCP for reliability</li>
+    <li>Optimized Batching</li>
+    <li>Zero-Allocation I/O Pipeline</li>
+  </ul>
+</div>
 <h4>Future Goals</h4>
-<ul>
-  <li>Encrypted Packets for secure data transmission</li>
-  <li>Packet Fragmentation and Reassembly to support large data payloads</li>
-  <li>Cryptographically Secure Authentication using connection tokens</li>
-</ul>
+<div class="pd-section">
+  <ul>
+    <li>Encrypted Packets for secure data transmission</li>
+    <li>Packet Fragmentation and Reassembly to support large data payloads</li>
+    <li>Cryptographically Secure Authentication using connection tokens</li>
+  </ul>
+</div>
 <p class="pd-demo-note">This project runs as a console server — all metrics and demos are showcased in <a href="lkz-demo">LKZ Demo →</a></p></div>
       </div>
 
