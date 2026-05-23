@@ -86,14 +86,14 @@
 <div class="media-gallery-viewport">
         <div class="media-gallery-slot active" data-index="0">
           <span class="media-gallery-slot-label">Extraction Z — Gameplay</span>
-          <video src="../assets/videos/extractionz.mp4" controls muted loop playsinline poster="../assets/images/projects/extractionz.jpg"></video>
+          <video src="../assets/videos/extractionz.mp4" controls muted loop playsinline poster="../assets/images/projects/extractionz/1.png"></video>
         </div>
       </div>
 
 <div class="media-gallery-strip">
         <div class="media-gallery-strip-inner">
           <button class="media-gallery-tab active" data-index="0">
-            <div class="media-gallery-tab-thumb"><img src="../assets/images/projects/extractionz.jpg" alt="Extraction Z — Gameplay"></div>
+            <div class="media-gallery-tab-thumb"><img src="../assets/images/projects/extractionz/1.png" alt="Extraction Z — Gameplay"></div>
             <span class="media-gallery-tab-num">01</span>
             <span class="media-gallery-tab-name">Extraction Z — Gameplay</span>
           </button>
@@ -209,6 +209,26 @@
       </aside>
     </div>
 
+    <!-- In Game Screenshots -->
+    <div class="pd-video-gallery">
+      <div class="pd-video-gallery-header">
+        <h4 class="pd-video-gallery-title" data-lang-fr="// Captures — In Game" data-lang-en="// Screenshots — In Game">// Screenshots — In Game</h4>
+        <span class="pd-video-gallery-count" data-lang-fr="10 captures" data-lang-en="10 screenshots">10 screenshots</span>
+      </div>
+      <div class="pd-video-grid">
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/1.png" alt="In Game 01"><span class="pd-photo-card-num">01</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/2.png" alt="In Game 02"><span class="pd-photo-card-num">02</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/3.png" alt="In Game 03"><span class="pd-photo-card-num">03</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/4.png" alt="In Game 04"><span class="pd-photo-card-num">04</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/5.png" alt="In Game 05"><span class="pd-photo-card-num">05</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/6.png" alt="In Game 06"><span class="pd-photo-card-num">06</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/7.png" alt="In Game 07"><span class="pd-photo-card-num">07</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/8.png" alt="In Game 08"><span class="pd-photo-card-num">08</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/9.png" alt="In Game 09"><span class="pd-photo-card-num">09</span><span class="pd-photo-card-expand">⤢ open</span></div>
+        <div class="pd-photo-card"><img src="../assets/images/projects/extractionz/10.png" alt="In Game 10"><span class="pd-photo-card-num">10</span><span class="pd-photo-card-expand">⤢ open</span></div>
+      </div>
+    </div>
+
     <!-- Prev/Next -->
     <div class="pd-nav-footer">
       <a class="pd-nav-btn pd-nav-next" href="iron-diver">
@@ -297,5 +317,53 @@
   </script>
   <script src="../assets/js/media-gallery.js"></script>
   <script src="../assets/js/cv-geo.js"></script>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-arrow lightbox-arrow-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Full size screenshot">
+    <button class="lightbox-arrow lightbox-arrow-next" id="lightbox-next" aria-label="Next">›</button>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
+  </div>
+
+  <script>
+    (function () {
+      const overlay  = document.getElementById('lightbox-overlay');
+      const img      = document.getElementById('lightbox-img');
+      const prevBtn  = document.getElementById('lightbox-prev');
+      const nextBtn  = document.getElementById('lightbox-next');
+      const counter  = document.getElementById('lightbox-counter');
+      const cards    = Array.from(document.querySelectorAll('.pd-photo-card'));
+      let current    = 0;
+
+      function show(index) {
+        current = index;
+        img.src = cards[current].querySelector('img').src;
+        counter.textContent = (current + 1) + ' / ' + cards.length;
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === cards.length - 1;
+      }
+
+      function open(index) { show(index); overlay.classList.add('active'); }
+      function close()      { overlay.classList.remove('active'); img.src = ''; }
+
+      cards.forEach((card, i) => card.addEventListener('click', () => open(i)));
+
+      prevBtn.addEventListener('click', e => { e.stopPropagation(); if (current > 0) show(current - 1); });
+      nextBtn.addEventListener('click', e => { e.stopPropagation(); if (current < cards.length - 1) show(current + 1); });
+
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay || e.target.id === 'lightbox-close') close();
+      });
+
+      document.addEventListener('keydown', e => {
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape')      close();
+        if (e.key === 'ArrowLeft'  && current > 0)               show(current - 1);
+        if (e.key === 'ArrowRight' && current < cards.length - 1) show(current + 1);
+      });
+    })();
+  </script>
 </body>
 </html>
